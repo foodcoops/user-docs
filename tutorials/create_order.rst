@@ -1,29 +1,29 @@
-Tutorial - How to create a new order
+Tutorial – How to create a new order
 ====================================
 
 This tutorial will help through the process of creating an order.
 
-Assumtions
+Assumptions
 ----------
-At this point it is assumed that ``Supliers`` and ``Articles`` already exists and are up to date!
+At this point it is assumed that ``Suppliers`` and ``Articles`` already exists and are up to date!
 Please see the tutorials to do so.
 
-Depending on your foodcoop updating prices and conditions are also your part of the job!
+Depending on your foodcoop, updating prices and conditions is also your part of the job!
 
-Create order
+Create an order
 -------------------------------------------------
 In foodsoft it is only possible to create an order for a supplier. It is not possible to create an order based on articles which are received by different suppliers.
 Therefore it is quite easy to create new orders.
 
 There are multiple posibilities:
 
-* ``Orders`` - ``Manage orders`` - ``Create new order`` select supplier.
-* ``Articles`` - ``Suppliers/articles`` - click on the name of the supplier - ``articles`` - ``Create new order``
+* ``Orders`` – ``Manage orders`` – ``Create new order`` select supplier.
+* ``Articles`` – ``Suppliers/articles`` – click on the name of the supplier – ``articles`` – ``Create new order``
 
 It is also possible to copy an old order:
-``Orders`` - ``Manage orders`` - ``Closed`` - ``Copy``
+``Orders`` – ``Manage orders`` – ``Closed`` – ``Copy``
 
-#. Prepare new order
+#. Prepare the new order
 
    #. Set ``Start``/``End``/``Pickup`` dates
    #. Set ``End action``
@@ -31,15 +31,15 @@ It is also possible to copy an old order:
 
 #. Click ``Create order``
 
-Prepare new order
+Preparing a new order
 -------------------
 Timing and/or dates
 ^^^^^^^^^^^^^^^^^^^
 * ``Starts at``: Has no effect, just leave it as it is.
-* ``Ends at``: [optional] Ending of the order and triggers the ``End action``, could be empty.
-* ``Pickup``: [optional] This is only an information field! Because the date of pickup influences the decision or placing the order! Could be emtpy!
-* ``End action``: This will happen at date given by ``Ends at``
-The E-Mail and minimum quantity are set under ``Articles`` - ``Suppliers/articles``.
+* ``Ends at``: [optional] Ending of the order and triggers the ``End action``, can be empty.
+* ``Pickup``: [optional] This is only an informational field! Because the date of pickup influences the decision of placing the order. Can be emtpy.
+* ``End action``: This will happen at date given by ``Ends at``.
+The email and minimum quantity are set under ``Articles`` – ``Suppliers/articles``.
 
 Available articles
 ^^^^^^^^^^^^^^^^^^
@@ -47,5 +47,5 @@ Article availability changes from time to time. Unchecked ``articles`` will not 
 
 
 Finally hit the ``Create order``-button.
-The order is now be visible under ``Current orders`` under ``Dashboard`` or ``Orders`` - ``Place order!``.
+The order is now visible under ``Current orders`` in the ``Dashboard`` or ``Orders`` – ``Place order!``.
 
