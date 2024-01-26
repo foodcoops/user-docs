@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2022-11-15T06:18:24.837Z
+date: 2024-01-26T22:10:25.951Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
@@ -155,13 +155,81 @@ Mit *Bank account erstellen* wird das Bankkonto in der Foodsoft angelegt.
 ## Spezialfälle
 
 ### Erste Bank
-Falls eure Foodcoop ein Konto bei der ErsteBank hat, gibt es die Möglichkeit, dass die Banktransaktionen von der Foodsoft automatisch im Hintergrund importiert werden können. Das manuelle Importieren mit der Freigabe über die s Identity-App entfällt dadurch.
+Falls eure FoodCoop ein Konto bei der ErsteBank hat, gibt es die Möglichkeit, dass die Banktransaktionen von der Foodsoft automatisch im Hintergrund importiert werden können. Das manuelle Importieren mit der Freigabe über die s Identity-App entfällt dadurch.
 
 
 Für die Verwendung von ErsteConnect ist ein gültiges Zertifikat notwendig, das regelmäßig erneuert werden muss. Die Erste hat dazu ein Kooperation mit I.CA, welche die Zertifikate ausstellen.
 
 Detaillierte Anleitung dazu siehe https://forum.foodcoops.at/t/foodsoft-ersteconnect-bankanbindung-einrichten/5965
 
+### Andere Foodsoft-Instanz verknüpfen (z.B. IG FoodCoops)
+
+Es ist auch möglich, eine Dummy-Bankanbindung anzulegen, um eine andere Foodsoft-Instanz zu verknüpfen.
+
+> Für die Verknüpfung mit der IG FoodCoops Foodsoft (https://app.foodcoops.at/austria) gibt es im Vernetzungsforum eine genaue Anleitung:
+https://forum.foodcoops.at/t/finanz-anbindung-eure-foodsoft-ig-foodcoops-foodsoft-austria/8009
+{.is-success}
+
+Anleitung für andere Fälle:
+
+#### 1. OAuth Daten der zu verknüpfenden Foodsoft aufrufen
+
+> Hierfür braucht ihr Admin-Rechte für die Foodsoft, die ihr verknüpfen wollt.
+{.is-warning}
+
+In der Foodsoft, die ihr verknüpfen wollt, auf Administration -> Einstellungen -> Apps (rechts oben) klicken. Neue Applikation anlegen* oder ggf. bestehende Foodsoft aufrufen (auf den Namen klicken). Ihr braucht **Applikations-ID** & **Secret** für den nächsten Schritt.
+
+*Beispieldaten für neue Applikation:
+Name: `Foodsoft`
+Redirect URI: 
+`https://app.foodcoops.at/`
+`https://bankproxy.foodcoops.at/callback`
+Confidential: false (kein Häkchen)
+Scopes: frei lassen
+
+#### 2. Bankproxy konfigurieren
+
+Öffnet die Bankproxy-Admin-Oberfläche unter https://bankproxy.foodcoops.at/admin und klickt auf `Authorize`.
+Unter Create gebt einen beliebigen Namen ein und wählt bei Type `net.foodcoops.foodsoft` aus. Daraufhin erscheinen zusätzliche Felder, die wie folgt auszufüllen sind:
+    IBAN: Ein Dummy-IBAN, z.B. ZZ75FOODSOFT
+    InstanceURL: z.B. `https://app.foodcoops.at/austria`
+    OAuthClientId: Applikations-ID aus obigem Schritt
+    OAuthClientSecret: Secret aus obigem Schritt
+    
+Nach einem Klick auf Create erscheinen darunter die Bankproxy-Credentials. Kopiert den Text neben Authorization, da in der Foodsoft benötigt wird.
+
+#### 3. Bank Gateway in eurer Foodsoft anlegen
+
+Ruft eure Foodsoft auf und klickt auf Administration → Finanzen.
+Dort rechts oben auf *Neuen Bank Gateway* anlegen und folgende Daten eingeben:
+Name: z.B. IG FoodCoops
+URL: z.B. `https://bankproxy.foodcoops.at`
+Authorization-Header: Der obig kopierte Text, beginnend (inklusive) mit Basic
+Bedienerlos-Benutzer_in: Die Person, die später auf „Importieren“ klickt (üblicherweise du selbst).
+
+#### 4. Dummy-Bankkonto in eurer Foodsoft anlegen
+
+Ebenso unter Administration → Finanzen:
+Klick rechts oben auf *Neues Bankkonto anlegen*.
+Name: z.B. IG FoodCoops Guthaben/Mitgliedsbeitrag
+IBAN: ZZ75FOODSOFT (oder ähnlich, Dummy)
+Bankgateway: Wähle den eben angelegten Gateway aus.
+
+#### 5. Transaktionen und Kontostand importieren
+
+Unter Finanzen → Bankkonten solltest du nun mehrere Bankkonten sehen, falls ihr auch euer eigenes Bankkonto an die Foodsoft angebunden habt. Wähle das neue aus und klicke rechts oben auf Importieren. Bestätige mit *Get Access*, nun sollten die Transaktionen und der Kontostand importiert werden.
+
+> Sollte es in der verknüpften Foodsoft mehrere Kontotransaktionsklassen (z.B. Bestellguthaben und Mitgliedsbeitrag-Guthaben) geben, wird der "Kontostand" dieser Kontotransaktionsklassen beim Import summiert - auch wenn der Mitgliedsbeitrag eigentlich nicht zum Guthaben zählen sollte.
+{.is-warning}
+
+> Vermutlich läuft der Import nicht täglich vollautomatisch ab (wie bei ErsteConnect), sondern ihr müsst manuell auf Importieren klicken.
+{.is-info}
+
+#### 6. Nutzen
+
+Nun könnt ihr z.B. die ausgehenden Mitgliedsbeitrag-Überweisungen von eurem Bankkonto mit dem jeweiligen Eingang auf eurem IG-Kontostand verknüpfen, ebenso bei Guthaben-Überweisungen.
+
+Außerdem scheint euer IG-Guthaben nun im Finanzbericht auf, den ihr unter Finanzen → Übersicht → Bericht erstellen (rechts oben) generieren könnt.
 
 # Bankkontozeilen importieren und weiterverarbeiten
 
