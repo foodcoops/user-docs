@@ -2,7 +2,7 @@
 title: Lager
 description: Verwalten des Foodcoop-Lagers und Produktinventars (Menü: "Artikel" > "Lager")
 published: true
-date: 2022-02-02T12:49:11.959Z
+date: 2024-06-11T21:21:14.069Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:55:48.199Z
@@ -68,7 +68,9 @@ Artikel sind nach Lieferant gruppiert dargestellt. Für schnelleres Auffinden vo
   - zum aktuellen Zeitpunkt noch bestellt werden kann
   - aktuell im Lager vorhanden ist, wenn alle Lagerbestellungenbeendet wurden und alle bestellten Artikel auch abgeholt wurden.
 
-Verbesserungsvorschlag: …
+|Status|im Lager|Davon bestellt|Verfügbar|realer Bestand |
+| |10|0|10|10|
+
 
 ## Detailansicht Lagerartikel
 
