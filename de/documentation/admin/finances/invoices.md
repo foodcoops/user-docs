@@ -2,7 +2,7 @@
 title: Rechnungen
 description: Rechnungen von Lieferantinnen digital ablegen, mit Bestellungen verknüpfen und Bezahlstatus
 published: true
-date: 2022-04-05T12:20:49.889Z
+date: 2024-09-11T18:06:00.305Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:05:17.349Z
@@ -296,15 +296,20 @@ Das Vorzeichen hat sich Anfang März 2021 umgedreht, die Bedeutung der Farben in
 ## Rechnung Detailansicht
 In der Rechnungsdetailansicht unmittelbar nach dem Erstellen der Rechnungs oder über *Finanzen > Rechnungen > Nummer oder Rechnungsdatum anklicken* sind folgende Details einzusehen:
 - **Pfandbereinigter Betrag** = Rechnungsbetrag - Pfand berechnet + Pfand gutgeschrieben
-- **Total** = Summe aus Bestellungen und Lieferungen Brutto (inkl. Pfand und Mwst, d.h. nicht Pfand-bereinigt\!), neu seit 2021-01: inklusive Transportkosten (werden bei Bestellung als zusätzlicher Plus-Betrag angezeigt; Transportkosten anlegen: siehe [Bestellungen](/de/documentation/admin/orders), Beispiel für Darstellung siehe unten).
+- **Total** = Summe aus Bestellungen und Lager-Lieferungen Brutto (inkl. Pfand und Mwst, d.h. nicht Pfand-bereinigt\!), neu seit 2021-01: inklusive Transportkosten (werden bei Bestellung als zusätzlicher Plus-Betrag angezeigt; Transportkosten anlegen: siehe [Bestellungen](/de/documentation/admin/orders), Beispiel für Darstellung siehe unten).
+
+
+
 
 > **Pfandbereinigter Betrag** und **Total** sollten übereinstimmen. 
 {.is-warning}
 
 Falls nicht, bedeutet das:
-- **Pfandbereinigter Betrag **größer als** Total**: Lieferant verrechnet mehr, als den Foodcoop Mitgliedern vom Guthaben abgezogen wird. Die Foodcoop macht Verlust.
-- **Pfandbereinigter Betrag **kleiner als** Total**: Lieferant verrechnet weniger, als den Foodcoop Mitgliedern vom Guthaben abgezogen wird. Die Foodcoop macht “Gewinn”.
+- **Pfandbereinigter Betrag **größer als** Total**: Lieferantin verrechnet mehr, als den Foodcoop Mitgliedern vom Guthaben abgezogen wird. Die Foodcoop macht Verlust.
+- **Pfandbereinigter Betrag **kleiner als** Total**: Lieferantin verrechnet weniger, als den Foodcoop Mitgliedern vom Guthaben abgezogen wird. Die Foodcoop macht “Gewinn”.
 
+> Lager-Lieferungen werden korrekt berücksichitgt, was in älteren Foodsoft-Versionen nicht der Fall war.
+{.is-info}
 
 
 ## Ursachen für Differenzen
