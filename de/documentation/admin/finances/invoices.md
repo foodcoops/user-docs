@@ -2,7 +2,7 @@
 title: Rechnungen
 description: Rechnungen von Lieferantinnen digital ablegen, mit Bestellungen verknüpfen und Bezahlstatus
 published: true
-date: 2024-11-14T23:16:02.057Z
+date: 2024-11-14T23:25:40.347Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:05:17.349Z
@@ -285,12 +285,6 @@ Um eine bereits angelegte Rechnung zu bearbeiten: zunächst wie oben beschrieben
 
 # Rechnung prüfen
 
-Unter *Finanzen \> Übersicht \> unbezahlte Rechnung* wir die Differenz zwischen Foodsoft Buchungen von den Mitgliederkonten und dem pfandbereinigten Rechnungsbetrag angezeigt, wenn sie nicht null ist:
-- roter minus-Betrag: Foodcoop macht Verlust
-- grüner plus-Betrag: Foodcoop macht Gewinn
-- kein Differenzbetrag: exakte Übereinstimmung der Beträge
-
-Das Vorzeichen hat sich Anfang März 2021 umgedreht, die Bedeutung der Farben in Bezug auf Verlust/Gewinn für die Foodcoop ist gleich geblieben.
 
 
 ## Rechnung Detailansicht
@@ -327,8 +321,8 @@ Die Seite *unbezahlte Rechnungen* kann über *Finanzen > Übersicht* oder *Finan
 > **Verwendungszweck und Gesamtsumme** sind für eine gemeinsame Überweisung von mehreren Rechnungen in einer einzelnen Überweisung gedacht, siehe *Rechnungen bezahlen*. 
 {.is-info}
 
-> 
-> **Foodcoop-Gewinn** ist die Differenz zwischen Einnahmen von den Mitgliedern für ihre Bestellungen und der Ausgaben für die Rechnung. Plus-Beträge bedeuten einen Gewinn für die Foodcoop und sind grün dargstellt, Minus-Beträge einen Verlust und sind rot dargestellt. 
+
+> **Foodcoop-Gewinn** ist die Differenz zwischen Einnahmen von den Mitgliedern für ihre Bestellungen und der Ausgaben für die Rechnung. Plus-Beträge bedeuten einen Gewinn für die Foodcoop und sind grün dargstellt, Minus-Beträge einen Verlust und sind rot dargestellt. Wenn kein Differenzbetrag angezeigt wird, bedeutet das eine exakte Übereinstimmung der Beträge (Differenz ist Null).
 {.is-info}
 
 
