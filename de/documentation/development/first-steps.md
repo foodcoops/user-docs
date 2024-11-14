@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2022-03-03T18:34:37.648Z
+date: 2024-11-14T23:37:39.156Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -141,7 +141,8 @@ Allgemeine Einführungen zum Ruby Framework für Web-Applikationen:
 # Verwendete Tools
 
 - **Ransack** enables the creation of both simple and advanced search forms for your Ruby on Rails application: https://github.com/activerecord-hackery/ransack/blob/master/README.md
-- **Simple Form** aims to be as flexible as possible while helping you with powerful components to create your forms: https://github.com/heartcombo/simple_formhttps://github.com/heartcombo/simple_form
+- **Simple Form** aims to be as flexible as possible while helping you with powerful components to create your forms: https://github.com/heartcombo/simple_form
+
 
 # Foodsoft Daten Struktur
 
