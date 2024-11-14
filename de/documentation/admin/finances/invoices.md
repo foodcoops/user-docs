@@ -2,7 +2,7 @@
 title: Rechnungen
 description: Rechnungen von Lieferantinnen digital ablegen, mit Bestellungen verknüpfen und Bezahlstatus
 published: true
-date: 2024-09-11T18:06:00.305Z
+date: 2024-11-14T23:16:02.057Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:05:17.349Z
@@ -308,27 +308,55 @@ Falls nicht, bedeutet das:
 - **Pfandbereinigter Betrag **größer als** Total**: Lieferantin verrechnet mehr, als den Foodcoop Mitgliedern vom Guthaben abgezogen wird. Die Foodcoop macht Verlust.
 - **Pfandbereinigter Betrag **kleiner als** Total**: Lieferantin verrechnet weniger, als den Foodcoop Mitgliedern vom Guthaben abgezogen wird. Die Foodcoop macht “Gewinn”.
 
-> Lager-Lieferungen werden korrekt berücksichitgt, was in älteren Foodsoft-Versionen nicht der Fall war.
+> Lager-Lieferungen werden bei **Total** korrekt berücksichtigt, was in älteren Foodsoft-Versionen nicht der Fall war.
+{.is-info}
+
+> Wenn die Bestellung(en) [Lager](/de/documentation/admin/storage)-Bestellungen enthalten, werden diese auch zu **Total** dazugerechnet. Wenn für diese Artikel dann eine entsprechende Lager-Lieferung angelegt und in der Rechnung eingetragen wird, werden die Lager-Artikel bei **Total** doppelt dazugezählt. Mit diesem Änderungsvorschlag für die Foodsoft sollte das behoben sein: https://github.com/foodcoops/foodsoft/pull/1075 bzw. https://github.com/foodcoopsat/foodsoft/pull/5
+> {.is-danger}
+
+## Unbezahlte Rechnungen
+Die Seite *unbezahlte Rechnungen* kann über *Finanzen > Übersicht* oder *Finanzen > Rechnungen* aufgerufen werden. Es werden nach Produzentinnen gruppiert alle unbezahlten Rechnungen (keine Datum bei *bezahlt am* eingetragen) aufgelistet:
+
+![admin_finances_order_transportkosten_unbezahlte_rechnungen.png](/uploads-de/admin_finances_order_transportkosten_unbezahlte_rechnungen.png) 
+
+* Rechnungsdatum, Rechnungsnummer, Rechnungsbetrag, Foodcoop-Gewinn
+* IBAN, falls für [Lieferantin](/de/documentation/admin/suppliers) hinterlegt
+* Verwendungszweck: Rechnungsnummer oder mit Beistrichen getrennte Liste der Rechnugsnummern, falls mehrere unbezahlte Rechnungen für die selbe Lieferantin aufgelistet wurden
+* Gesamtsumme: Rechnungsbetrag oder Summe der Rechnungsbeträge, falls mehrere unbezahlte Rechnungen für die selbe Lieferantin aufgelistet wurden. 
+
+> **Verwendungszweck und Gesamtsumme** sind für eine gemeinsame Überweisung von mehreren Rechnungen in einer einzelnen Überweisung gedacht, siehe *Rechnungen bezahlen*. 
+{.is-info}
+
+> 
+> **Foodcoop-Gewinn** ist die Differenz zwischen Einnahmen von den Mitgliedern für ihre Bestellungen und der Ausgaben für die Rechnung. Plus-Beträge bedeuten einen Gewinn für die Foodcoop und sind grün dargstellt, Minus-Beträge einen Verlust und sind rot dargestellt. 
 {.is-info}
 
 
-## Ursachen für Differenzen
+> Wenn die Bestellung(en) [Lager](/de/documentation/admin/storage)-Bestellungen enthalten, werden diese auch zu den Einnahmen von den Mitgliedern für ihre Bestellungen dazugerechnet, obwohl die Foodcoop selbst dafür aufkommen muss. Lager-Lieferungen werden (anders als in der Rechnungsansicht) nicht berücksichtigt. Mit diesem Änderungsvorschlag für die Foodsoft sollte das behoben sein: https://github.com/foodcoops/foodsoft/pull/1075 bzw. https://github.com/foodcoopsat/foodsoft/pull/5
+> {.is-danger}
 
-Foodcoops sollten gunrdsätzlich weder Gewinn noch Verlust machen. Ab welchem Differenzbetrag eine Nachforschung Sinn macht, ist Ermessenssache der Foodcoop. Wegen ein paar Euro Differenz stundenlang auf Fehlersuche zu gehen, ist schnell mal ein unverhältnismäßig hoher Aufwand.
-Zufällige, einmalige Fehler sind eher tolerierbar als systematische Fehler, die wiederholt auftreten, weil z.B. Artikelpreise in der Foodsoft falsch eingegeben sind.
-
-Mögliche Ursachen für Differenzen sind:
-- **Rundungsdifferenzen**: Durch unterschiedliche Arten der [Mehrwertsteuer-Berechnung](/de/documentation/admin/finances/value-added-tax) in Verbindung mit Rundungen kann es zu geringen Differenzen in der Größenordnung von max. 1 Cent pro Artikel kommen. Abhilfe: Artikelpreise um 1 Cent anheben, falls es regelmäßig zu Verlusten für die Foodcoop kommt.
-- **Fehler in der Rechnung**. Abhilfe: Rechnung prüfen und bei der Lieferantin reklamieren.
-- Unterschiedlicher **Artikelpreis** in Bestellung und Rechnung. Abhilfe: Preis in der Foodsoft korrigieren, oder bei der Lieferantin reklamieren
-- Unterschiedliche **Artikelmengen** in Bestellung und Rechnung. Abhilfe: in der Foodsoft [Bestellung anpassen](/de/documentation/admin/orders) an die Mengen, die geliefert wurden, oder bei der Lieferantin reklamieren. Beim Abholen oder Aufteilen der Waren kann können auch Artikel "verloren" gehen oder versehentlich an falsche Mitglieder geraten. Eine Nachforschung ist meist sehr aufwändig und nur selten erfolgreich. Auch wenn ohne Klärung wohl oder übel der Verein die Kosten für die fehlenden Artikel übernehmen muss, ist das auf jeden Fall der zeitsparendere Weg.
-- **Variables Gewicht** bei Artikeln, die pro Stück bestellt werden, Lieferantin verrechnet nach tatsächlich geliefertem Gewicht. Abhilfe:  in der Foodsoft [Bestellung anpassen](/de/documentation/admin/orders) an die Mengen, die geliefert wurden, eventuell den Grundpreis von Artikeln mit variablem Gewicht in der Foodsoft erhöhen, damit er einem größeren Artikelgewicht entspricht.
-- Lieferantin verrechnet **zusätzliche Kosten** wie Transportkosten oder Pfandgebinde. Abhilfe: wie beschrieben Transportkosten und Pfandkosten in der Foodsoft eingeben, damit sie in der Bilanz berücksichtigt werden.
 
 
 ## Rechnungsbilanz bei *Bestellung abrechnen*
 
 Unter *Finanzen > Bestellungen abrechnen* findest du ebenfalls eine Gegenüberstellung von Bestellung und Rechnung, die allerdings nur dann brauchbar ist, wenn es genau eine Bestellung gibt, die der Rechnung zugeordnet wird. Werden mehrere Bestellungen zugeordnet, wird immer nur die aktuelle Bestellung mit der gesamten Rechnung verglichen.
+
+## Ursachen für Differenzen
+
+Foodcoops sollten grundsätzlich weder Gewinn noch Verlust machen. Ab welchem Differenzbetrag eine Nachforschung Sinn macht, ist Ermessenssache der Foodcoop. Wegen ein paar Euro Differenz stundenlang auf Fehlersuche zu gehen, ist schnell mal ein unverhältnismäßig hoher Aufwand.
+Zufällige, einmalige Fehler sind eher tolerierbar als systematische Fehler, die wiederholt auftreten, weil z.B. Artikelpreise in der Foodsoft falsch eingegeben sind.
+
+Mögliche Ursachen für Differenzen sind:
+- **Rundungsdifferenzen**: Durch unterschiedliche Arten der [Mehrwertsteuer-Berechnung](/de/documentation/admin/finances/value-added-tax) in Verbindung mit Rundungen kann es zu geringen Differenzen in der Größenordnung von max. 1 Cent pro Artikel kommen. Abhilfe: Artikelpreise um 1 Cent anheben, falls es regelmäßig zu Verlusten für die Foodcoop kommt.
+- **Fehler in der Rechnung der Lieferantin**. Abhilfe: Rechnung prüfen und bei der Lieferantin reklamieren.
+- Unterschiedlicher **Artikelpreis** in Bestellung und Rechnung. Abhilfe: Preis in der Foodsoft korrigieren, oder bei der Lieferantin reklamieren
+- Unterschiedliche **Artikelmengen** in Bestellung und Rechnung. Abhilfe: in der Foodsoft [Bestellung anpassen](/de/documentation/admin/orders) an die Mengen, die geliefert wurden, oder bei der Lieferantin reklamieren. Beim Abholen oder Aufteilen der Waren kann können auch Artikel "verloren" gehen oder versehentlich an falsche Mitglieder geraten. Eine Nachforschung ist meist sehr aufwändig und nur selten erfolgreich. Auch wenn ohne Klärung wohl oder übel der Verein die Kosten für die fehlenden Artikel übernehmen muss, ist das auf jeden Fall der zeitsparendere Weg.
+- **Variables Gewicht** bei Artikeln, die pro Stück bestellt werden, Lieferantin verrechnet nach tatsächlich geliefertem Gewicht. Abhilfe:  in der Foodsoft [Bestellung anpassen](/de/documentation/admin/orders) an die Mengen, die geliefert wurden, eventuell den Grundpreis von Artikeln mit variablem Gewicht in der Foodsoft erhöhen, damit er einem größeren Artikelgewicht entspricht.
+- Lieferantin verrechnet **zusätzliche Kosten** wie Transportkosten oder Pfandgebinde. Abhilfe: wie beschrieben Transportkosten und Pfandkosten in der Foodsoft eingeben, damit sie in der Bilanz berücksichtigt werden.
+- **Falsche Bilanzberechnung der Foodsoft** in Verbindung mit Lager-Bestellungen und Lager-Lieferungen, siehe oben bei *Rechnung prüfen* und *Unbezahlte Rechnungen*.
+
+
+
 
 
 
@@ -354,6 +382,9 @@ Beispiel:
 > ![admin_finances_order_transportkosten_rechnung.png](/uploads-de/admin_finances_order_transportkosten_rechnung.png)
 > ![admin_finances_order_transportkosten_unbezahlte_rechnungen.png](/uploads-de/admin_finances_order_transportkosten_unbezahlte_rechnungen.png) 
 {.is-success}
+
+> Wenn Transportkosten angelegt, aber nicht auf die Bestellgruppen aufgeteilt werden, muss die Foodcoop dafür aufkommen. Das scheint derzeit in den Bilanzen nicht auf, es wirkt so, als ob die Bestellgruppen dafür aufkommen würden. Ebenso wenn die Transportkosten zwar auf die Bestellgruppen aufgeteilt werden, aber eine Lager-Bestellung dabei ist, muss die Foodcoop für die Transportkosten der Lagerbestellung aufkommen. Mit diesem Änderungsvorschlag für die Foodsoft sollte das korrekt berücksichtigt werden: https://github.com/foodcoops/foodsoft/pull/1075 bzw. https://github.com/foodcoopsat/foodsoft/pull/5
+{.is-danger}
 
 
 
