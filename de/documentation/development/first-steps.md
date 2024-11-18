@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2024-11-14T23:37:39.156Z
+date: 2024-11-18T20:43:21.765Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -173,6 +173,10 @@ Wo ist im Code was zu finden?
 Query-Strings Beschreibung:
 https://github.com/activerecord-hackery/ransack
 
+Oauth2 Zugang zur Foodsoft einrichten:
+- https://app.foodcoops.at/...foodcoop.../oauth/applications
+- https://app.foodcoops.at/demo/oauth/applications
+- http://localhost:3000/f/oauth/applications
 
 ## Beispiel-Codes
 
