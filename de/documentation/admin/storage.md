@@ -2,7 +2,7 @@
 title: Lager
 description: Verwalten des Foodcoop-Lagers und Produktinventars (Menü: "Artikel" > "Lager")
 published: true
-date: 2024-06-11T21:22:23.908Z
+date: 2024-11-18T19:56:20.005Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:55:48.199Z
@@ -190,7 +190,7 @@ Tipps:
 
 # Inventur anlegen
 
-Erfahrungsgemäß stimmt dnach einger Zeit er tatsächliche Lagerstand oft nicht mit dem in der Foodsoft zusammen, weil Artikel bestellt, aber nicht abgeholt werden, oder umgekehrt. Daher ist es von Zeit zu Zeit notwendig, eine Inventur durchzuführen, um den Lagerbestand in der Foodsoft dem tatsächlichen anzupassen, siehe unten. Eine Inventur ist aber nur sinnvoll, wenn gerade keine laufende Lagerbestellung offen ist, und alle bisher bestellten Lagerartikel auch schon abgeholt wurden. 
+Erfahrungsgemäß stimmt nach einger Zeit der tatsächliche Lagerstand oft nicht mit dem in der Foodsoft zusammen, weil Artikel bestellt, aber nicht abgeholt werden, oder umgekehrt. Daher ist es von Zeit zu Zeit notwendig, eine Inventur durchzuführen, um den Lagerbestand in der Foodsoft dem tatsächlichen anzupassen, siehe unten. Eine Inventur ist aber nur sinnvoll, wenn gerade keine laufende Lagerbestellung offen ist, und alle bisher bestellten Lagerartikel auch schon abgeholt wurden. 
 
 Empfehlungen daher: 
 - Bisherige Lagerbestellungen vorher beenden (und abrechnen?): Während der Inventur darf keine Lagerbestellung offen sein. 
