@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2024-11-18T20:43:21.765Z
+date: 2025-02-06T09:42:33.502Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -23,6 +23,7 @@ Folgende Links führen zu den Github Repositories:
 - https://github.com/foodcoops/foodsoft – der Hauptzweig der Foodsoft.
 - https://github.com/foodcoopsat/foodsoft – eine Abspaltung („Fork“) des Hauptzweigs, der den Stand der Foodsoft am IG Foodcoops Server (https://app.foodcoops.at/...) wiederspiegeln sollte. Manche Erweiterungen sind hier für die österreichischen Foodcoops integriert, die für Foodcoops in anderen Ländern nicht „relevant“ sind.
 - Sobald du dich registrierst und selbst Änderungen durchführst, solltest du einen Fork für deine Änderungen anlegen, der dann unter https://github.com/DEIN_GITHUB_BENUTZERNAME/foodsoft erreichbar ist.
+- Erweiterung für Bankanbindung österreichische Banken: https://github.com/bankproxy
 
 # Installation der Foodsoft
 
