@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2023-04-09T03:49:21.338Z
+date: 2025-04-28T12:36:05.916Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -98,7 +98,7 @@ Die Konfiguration der benutzerdefinierten Felder wird in einem einzigen Datensat
 
 ### Datensatz für benutzerdefinierte Felder finden
 
-Stelle die Anzahl der Datensätze auf das Maximum und gib bei "Zeilen filtern" `.custom` ein, dann sollte ein Datensatz mit var = `foodcoop.<name>.custom_fields` erscheinen. Wenn nichts erscheint, probiere auf Seite 2, 3 ... zu blättern, bis er erscheint.
+Stelle die Anzahl der Datensätze auf das Maximum und gib bei "Zeilen filtern" `.custom` ein, dann sollte ein Datensatz mit var = `foodcoop.<name>.custom_fields` erscheinen. Wenn nichts erscheint, probiere auf Seite 2, 3 ... zu blättern, bis er erscheint. Sollte er nicht existieren, musst du einen neuen Datensatz erstellen.
 
 ![db_customfields.png](/db_customfields.png)
 
