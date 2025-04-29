@@ -2,7 +2,7 @@
 title: Leitfaden Foodosoft Dokumentation
 description: Leitfaden zur Bearbeitung von Beiträgen dieser Foodosoft Dokumentation
 published: true
-date: 2022-10-30T20:07:03.237Z
+date: 2025-04-29T06:43:38.514Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-06T10:35:36.615Z
@@ -39,7 +39,7 @@ Die Funktionsweise des verwendeten Wiki JS ist unter https://docs.requarks.io be
 > Die Inhalte des Wikis sind auf Github geclont unter https://github.com/foodcoops/user-docs
 {.is-info}
 
-> Die Hauptsprache muss auf Niederländisch eingestellt sein, damit *... (Mario bitte ergänzen, das war damit das Klonen funktioniert, oder?) ...* Für Änderungen in den Einstellungen kanns sie vorübergehend auf Deutsch oder Englisch umgestellt werden. 
+> Die Hauptsprache muss auf Niederländisch eingestellt sein, damit *... (Mario bitte ergänzen, das war damit das Klonen funktioniert, oder?) ...* Für Änderungen in den Einstellungen kann sie vorübergehend auf Deutsch oder Englisch umgestellt werden. 
 {.is-warning}
 
 # Struktur
