@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2025-05-05T10:59:43.553Z
+date: 2025-05-05T20:57:33.733Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -253,7 +253,7 @@ Das macht aber eigentlich nur Sinn, um das **Abholdatum anzupassen** oder nachzu
 
 ## Per E-Mail an Lieferantin schicken
 
-> Die Email wird von der Foodsoft an die Lieferantin und an die Email-Adresse der Benutzerin geschickt, die die Bestellung erstellt hat.  
+> Die Email wird von der Foodsoft an die Lieferantin und an die Email-Adresse der Benutzerin (CC und Reply-to) und im Namen der Benutzerin geschickt, die gerade angemeldet ist. Es wurde aber auch beobachtet, dass Email und Name der Benutzerin verwendet wurden, die die Bestellung erstellt hat (Mirko 2025-05 - noch öfter testen!).  
 {.is-warning}
 
 > Laut Quellcode der Foodsoft in **app/controllers/orders_controller.rb** sollte die gerade angemeldeten Benutzerin verwendet werden:   
