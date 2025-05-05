@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2025-05-05T10:33:56.089Z
+date: 2025-05-05T10:38:10.432Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -260,7 +260,9 @@ Die Email enthält:
 
 - Betreff: [*...Foodcoop...*] Neue Bestellung für *...Lieferantin...* (Abholung: 25.04.2025)
 - Von: Foodsoft <noreply@app.foodcoops.at>
-- An office; mich
+- An: *...E-Mail Liefarntin...*
+- cc: *...E-Mail Benutzerin...*
+- reply-to: *...E-Mail Benutzerin...*
 
 Guten Tag,
 
