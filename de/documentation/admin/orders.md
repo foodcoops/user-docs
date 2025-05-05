@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2025-05-05T10:32:37.267Z
+date: 2025-05-05T10:33:56.089Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -256,6 +256,8 @@ Das macht aber eigentlich nur Sinn, um das **Abholdatum anzupassen** oder nachzu
 > Die Email wird von der Foodsoft an die Lieferantin und an die Email-Adresse der gerade angemeldeten Benutzerin geschickt.  
 {.is-info}
 
+Die Email enthält:
+
 - Betreff: [*...Foodcoop...*] Neue Bestellung für *...Lieferantin...* (Abholung: 25.04.2025)
 - Von: Foodsoft <noreply@app.foodcoops.at>
 - An office; mich
@@ -274,6 +276,8 @@ Mit freundlichen Grüßen
 --
 Foodsoft: https://app.foodcoops.at/...
 Foodcoop: http://www...
+
+### Beispiel Email
 
 ![admin_orders_email-supplier.png](/uploads-de/admin_orders_email-supplier.png)
 
