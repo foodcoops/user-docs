@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2025-05-05T10:41:23.293Z
+date: 2025-05-05T10:59:43.553Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -253,8 +253,15 @@ Das macht aber eigentlich nur Sinn, um das **Abholdatum anzupassen** oder nachzu
 
 ## Per E-Mail an Lieferantin schicken
 
-> Die Email wird von der Foodsoft an die Lieferantin und an die Email-Adresse der gerade angemeldeten Benutzerin geschickt.  
-{.is-info}
+> Die Email wird von der Foodsoft an die Lieferantin und an die Email-Adresse der Benutzerin geschickt, die die Bestellung erstellt hat.  
+{.is-warning}
+
+> Laut Quellcode der Foodsoft in **app/controllers/orders_controller.rb** sollte die gerade angemeldeten Benutzerin verwendet werden:   
+    def send_result_to_supplier
+        order = Order.find(params[:id])
+        order.send_to_supplier!(**@current_user**)  
+{.is-danger}
+
 
 Die Email enthält:
 
