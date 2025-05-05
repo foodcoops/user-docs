@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2022-06-21T11:27:18.882Z
+date: 2025-05-05T10:25:02.452Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -250,6 +250,31 @@ Das macht aber eigentlich nur Sinn, um das **Abholdatum anzupassen** oder nachzu
 
 > Die Fax-Downloads enthalten nur jene Artikel, von denen etwas bestellt wurde, und hier auch nur die Gesamtzahl der Artikeleinheiten, ohne die Information, welche Bestellgruppe wieviel davon bestellt hat. 
 {.is-info}
+
+## Per E-Mail an Lieferantin schicken
+
+
+- Betreff: [*...Foodcoop...*] Neue Bestellung für *...Lieferantin...* (Abholung: 25.04.2025)
+- Von: Foodsoft <noreply@app.foodcoops.at>
+- An office; mich
+
+Guten Tag,
+
+die Foodcoop ... möchte gerne eine Bestellung abgeben.
+
+Im Anhang befinden sich ein PDF und eine CSV-Tabelle.
+
+Mit freundlichen Grüßen
+
+*...Benutzerin Vor- und Nachname ...*
+*...FoodCoop...*
+
+--
+Foodsoft: https://app.foodcoops.at/...
+Foodcoop: http://www...
+
+![admin_orders_email-supplier.png](/uploads-de/admin_orders_email-supplier.png)
+
 
 
 ## Beispiel Fax PDF
