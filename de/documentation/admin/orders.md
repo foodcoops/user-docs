@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2025-05-05T10:38:10.432Z
+date: 2025-05-05T10:41:23.293Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -243,7 +243,7 @@ Das macht aber eigentlich nur Sinn, um das **Abholdatum anzupassen** oder nachzu
     - Über die Funktion Bestellverwaltung > Bestellung anzeigen > **an Lieferantin schicken**: ...
     -  Bestelllisten herunterladen (Bestellungen > Bestellverwaltung > Bestellung anzeigen > **Download > Fax PDF/Text/CSV**) und z.B. per Email versenden
 
-![bestellung-download.png](/uploads-de/admin_orders_bestellung-download.png)
+
 
 > Die Funktion "Download" ist nur für beendete Bestellungen verügbar.
 {.is-warning}
@@ -260,7 +260,7 @@ Die Email enthält:
 
 - Betreff: [*...Foodcoop...*] Neue Bestellung für *...Lieferantin...* (Abholung: 25.04.2025)
 - Von: Foodsoft <noreply@app.foodcoops.at>
-- An: *...E-Mail Liefarntin...*
+- An: *...E-Mail Lieferantin...*
 - cc: *...E-Mail Benutzerin...*
 - reply-to: *...E-Mail Benutzerin...*
 
@@ -286,6 +286,8 @@ Foodcoop: http://www...
 
 
 ## Beispiel Fax PDF
+
+![bestellung-download.png](/uploads-de/admin_orders_bestellung-download.png)
 
 In diesem Beispiel wurden bei den Artikel der Lieferantin keine Bestellnummern eingegeben, sodass die erste Spalte leer ist. 
 > Die Liefarantin druckt diese Liste aus und vermerkt in der ersten Spalte händisch die tatsächlich gelieferte Menge, falls es Abweichungen gibt. So wird die Bestellliste zum Lieferschein und kommt mit der Lieferung in die Foodcoop zurück.
