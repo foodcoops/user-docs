@@ -2,7 +2,7 @@
 title: Rechnungen
 description: Rechnungen von Lieferantinnen digital ablegen, mit Bestellungen verknüpfen und Bezahlstatus
 published: true
-date: 2025-05-29T22:12:35.717Z
+date: 2025-05-29T23:55:39.713Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:05:17.349Z
@@ -152,7 +152,7 @@ Falls die Rechnung schon bezahlt wurde, das Datum eintragen, an dem dies erledig
 
 ## Betrag
 
-Rechnungsbetrag (inklusive [Mehrwertsteuer](/de/documentation/admin/finances/value-added-tax)) von der Rechnung übernehmen. Als Dezimaltrennzeichen kann dabei Komma oder Punkt verwendet werden, also für eine Rechnugssumme von z.B. 1.257,87 € entweder `1257,87` oder `1257.87` - angezeigt wird der Betrag dann in Folge mit einem Punkt als Dezimaltrennzeichen.
+Rechnungsbetrag (inklusive [Mehrwertsteuer](/de/documentation/admin/finances/value-added-tax)) von der Rechnung übernehmen. Als Dezimaltrennzeichen kann dabei Komma oder Punkt verwendet werden, also für eine Rechnungssumme von z.B. 1.257,87 € entweder `1257,87` oder `1257.87` - angezeigt wird der Betrag dann in Folge mit einem Punkt als Dezimaltrennzeichen.
 
 ## Pfand berechnet
 
