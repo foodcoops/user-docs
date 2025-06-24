@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Überblick und Anleitungen zur Bestellung sowie Abholung
 published: true
-date: 2025-06-24T07:50:24.988Z
+date: 2025-06-24T07:53:45.026Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-02T21:00:01.863Z
@@ -156,7 +156,11 @@ Sobald ein Artikel ausgewählt ist, indem die Anzahl der bestellten Einheiten ve
 - auf eine der grau hinterlegten Kategorie-Überschriften:
 
 ![usage_order_bestellen-smartphone.png](/uploads-de/usage_order_bestellen-smartphone.png =400x)
-{.is-warning}
+
+> Fehlerbeschreibung auf der Foodsuft Entwicklungsplattform: \
+https://github.com/foodcoops/foodsoft/issues/665
+{.is-danger}
+
 
 ## Bestellungen stornieren
 
