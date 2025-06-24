@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Überblick und Anleitungen zur Bestellung sowie Abholung
 published: true
-date: 2025-06-24T07:44:36.478Z
+date: 2025-06-24T07:50:24.988Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-02T21:00:01.863Z
@@ -144,15 +144,19 @@ Danach siehst du zusammenfassend eine Übersicht über die Artikel, die du beste
 {.is-info}
 
 
-> **Bestellen über Smartphone**: Speichern-Button wieder sichtbar machen durch Deaktivieren des zuletzt aktivierten Artikels: ins Weiße rechts über den Artikeln tippen oder auf eine der grau hinterlegten Kategorie-Überschriften: \
-\
-![usage_order_bestellen-smartphone.png](/uploads-de/usage_order_bestellen-smartphone.png =400x)
-{.is-warning}
+
 
 > Wenn dein **verfügbares Guthaben** erschöpft ist, kannst du nicht mehr bestellen. Lade rechtzeitig dein Guthaben auf. 
 {.is-warning}
 
+### Bestellen am Smartphone
 
+Sobald ein Artikel ausgewählt ist, indem die Anzahl der bestellten Einheiten verändert wurde, verschwindet auf Smartphones der *Bestellung Speichern* Button. Du kannst den Speichern-Button wieder sichtbar machen, indem du: 
+- ins Weiße rechts über den Artikeln tipps,  oder 
+- auf eine der grau hinterlegten Kategorie-Überschriften:
+
+![usage_order_bestellen-smartphone.png](/uploads-de/usage_order_bestellen-smartphone.png =400x)
+{.is-warning}
 
 ## Bestellungen stornieren
 
