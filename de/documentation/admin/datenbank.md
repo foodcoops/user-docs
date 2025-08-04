@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2025-04-28T12:36:05.916Z
+date: 2025-08-04T08:30:34.478Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -190,7 +190,7 @@ Die letzte Zeile bewirkt, dass im Menü `Neue Überweisungen eingeben` folgender
 > Der Mitgliedsbeitrag kann so je Bestellgruppe individuell festgelegt werden - z.B. je nach dem, aus wie vielen Personen eine Bestellgruppe besteht oder welche Einkommensverhältnisse vorherrschen.
 {.is-success}
 
-> Es können auch mehrere benutzerdefinierte als financial_transaction_source definiert werden, dann erscheinen mehrere solche Buttons ("Alle Bestellgruppen mit ... hinzufügen") nebeneinander.
+> Es können auch mehrere benutzerdefinierte Felder als financial_transaction_source definiert werden, dann erscheinen mehrere solche Buttons ("Alle Bestellgruppen mit ... hinzufügen") nebeneinander.
 {.is-success}
 
 Die empfohlene Vorgehensweise für das Verwalten von Mitgliedsbeiträgen über die Foodsoft ist also:
@@ -200,3 +200,31 @@ Die empfohlene Vorgehensweise für das Verwalten von Mitgliedsbeiträgen über d
 4. [Kontotransaktionsklasse & -typ für Mitgliedsbeitrag einrichten](https://docs.foodcoops.net/de/documentation/admin/finances/accounts) (kann auch vorher geschehen)
 5. Bestellgruppen laden ihren Mitgliedsbeitrag auf (wie Guthaben), können also beliebig im Voraus oder nur für die nächste Einziehung einzahlen
 6. Ein Mitglied zieht den Mitgliedsbeitrag z.B. jeden Monat/Quartal ein - dabei kann es passieren, dass Bestellgruppen mit ihrem "Mitgliedsbeitrag-Guthaben" ins Minus rutschen und erinnert werden müssen es wieder einzuzahlen.
+
+# SQL-Abfrage um Rechnungen ohne Anhang zu finden
+
+Für FoodCoops mit digitaler Buchführung (d.h. alle Rechnungen werden digital per Foodsoft gespeichert) wurde nach einer Möglichkeit gesucht herauszufinden, welche Rechnungen keinen Anhang haben, z.B. weil er beim Anlegen vergessen wurde hochzuladen. In der Foodsoft müsste man dafür jede Rechnung einzeln anklicken, da in der Rechnungsliste nicht angezeigt wird, ob ein Anhang existiert.
+
+Mit einem Datenbankzugang (phpMyAdmin) lässt sich dies per SQL-Abfrage ermitteln.
+
+Wähle dazu in der Liste der Datenbanken deine Foodsoft aus uns anschließend auf den Reiter SQL:
+![sql_reiter.png](/sql_reiter.png)
+
+Kopiere folgende SQL-Abfrage und füge sie ein:
+
+```
+SELECT i.id, i.number, i.date, i.paid_on, i.amount
+FROM   `invoices` i LEFT OUTER JOIN `active_storage_attachments` a ON i.id = a.record_id
+WHERE  a.record_id IS NULL
+ORDER  BY i.id DESC;
+```
+
+Um die Abfrage im phpMyAdmin zu speichern, gib ihr einen Namen:
+![sql_abfrage_speichern.png](/sql_abfrage_speichern.png)
+
+Klicke auf den Button **OK**, um die Abfrage auszuführen.
+
+Anschließend werden die Rechnungen ohne Anhang aufgelistet (zuletzt erstellte zuerst).
+
+Um eine Rechnung in der Foodsoft wiederzufinden, rufe dort eine beliebige Rechnung auf und ersetze die Zahl hinter dem letzten `/` mit der entsprechenden `id`, z.B.:
+`.../deine-foodcoop/finance/invoices/123`
