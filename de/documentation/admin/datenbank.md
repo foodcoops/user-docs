@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2025-08-04T08:30:34.478Z
+date: 2025-08-13T12:11:20.579Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -201,7 +201,8 @@ Die empfohlene Vorgehensweise für das Verwalten von Mitgliedsbeiträgen über d
 5. Bestellgruppen laden ihren Mitgliedsbeitrag auf (wie Guthaben), können also beliebig im Voraus oder nur für die nächste Einziehung einzahlen
 6. Ein Mitglied zieht den Mitgliedsbeitrag z.B. jeden Monat/Quartal ein - dabei kann es passieren, dass Bestellgruppen mit ihrem "Mitgliedsbeitrag-Guthaben" ins Minus rutschen und erinnert werden müssen es wieder einzuzahlen.
 
-# SQL-Abfrage um Rechnungen ohne Anhang zu finden
+# Beispiele für Datenbank-Operationen
+## Rechnungen ohne Anhang finden
 
 Für FoodCoops mit digitaler Buchführung (d.h. alle Rechnungen werden digital per Foodsoft gespeichert) wurde nach einer Möglichkeit gesucht herauszufinden, welche Rechnungen keinen Anhang haben, z.B. weil er beim Anlegen vergessen wurde hochzuladen. In der Foodsoft müsste man dafür jede Rechnung einzeln anklicken, da in der Rechnungsliste nicht angezeigt wird, ob ein Anhang existiert.
 
@@ -228,3 +229,37 @@ Anschließend werden die Rechnungen ohne Anhang aufgelistet (zuletzt erstellte z
 
 Um eine Rechnung in der Foodsoft wiederzufinden, rufe dort eine beliebige Rechnung auf und ersetze die Zahl hinter dem letzten `/` mit der entsprechenden `id`, z.B.:
 `.../deine-foodcoop/finance/invoices/123`
+
+## Finanzlinks von Transaktionen und Rechnungen deaktivieren
+
+Jede Foodsoft-Transaktion sollte idealerweise mit einer anderen Transaktion verlinkt sein, z.B. eine Guthaben Aufladung mit der Bank-Transaktion oder eine Guthaben Abbuchung für eine Bestellung mit einer Foodccop-Buchung. Wenn das nicht von Anfang an gemacht wurde, gibt es viele Transaktionen, die nicht verlinkt sind. Bei Auswahllisten beim Erstellen eines Finanzlinks werden alle angezeigt, denen nichts zugeordnet ist, und das sind dann oft sehr, sehr viele. Damit die alten nicht mehr angezeigt werden, kann die Finanzlink ID von älteren Transaktionen von NULL auf -1 gesetzt werden:  
+
+```
+UPDATE `financial_transactions` 
+SET `financial_link_id`=-1 
+WHERE `financial_link_id` IS NULL 
+AND `note` LIKE 'Bestellung:%';
+```
+
+Das setzt zum Beispiel für alle Abrechnungen von Bestellungen die Finanzlink IDs auf -1, die noch nicht verlinkt sind - in früheren Foodsoft Versionen wurden die Abrechnungstransaktionen noch nicht über einen Finanzlink verlinkt. 
+
+```
+UPDATE `invoices` 
+SET `financial_link_id`=-1 
+WHERE `financial_link_id` IS NULL 
+AND `id`<= 1782;
+```
+
+Das setzt bei allen Rechnungen ohne Finanzlink mit ID <= 1782 die Finanzlink ID auf -1. Diese Rechnungen scheinen dann beim Hinzufügen einer Rechnung bei einem Finanzlink nicht mehr auf. 
+
+## Unbenutzte Lagerartikel entfernen
+Alle Lagerartikel "löschen", wo Lagerstand 0 ist:
+```
+
+UPDATE `articles` 
+SET `deleted_at` = '2025-08-12 11:00:00' 
+WHERE type="StockArticle"  
+AND quantity=0 
+AND deleted_at IS NULL;
+```
+Die Artikel werden nicht gelöscht, es wird nur im Feld  *deleted_at* ein Datum eingetragen, wodurch die Artikel in der Foodsoft nicht mehr aufscheinen. Wenn statt dem Datum wieder NULL eingetragen wird, ist der Artikel wieder sichtbar. Wenn über die Foodsoft ein Artikel gelöscht wird, passiert das Gleiche und der Artikel ist immer noch in der Datenbank.
