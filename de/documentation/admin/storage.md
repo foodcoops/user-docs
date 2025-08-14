@@ -2,7 +2,7 @@
 title: Lager
 description: Verwalten des Foodcoop-Lagers und Produktinventars (Menü: "Artikel" > "Lager")
 published: true
-date: 2025-08-14T22:25:16.650Z
+date: 2025-08-14T22:44:56.776Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:55:48.199Z
@@ -76,6 +76,12 @@ Artikel sind nach Lieferant gruppiert dargestellt. Für schnelleres Auffinden vo
 |2 bestellt, abgeholt + abgerechnet            |       8|        0|        8|             8|  0 | 
 |2 bestellt und nicht abgeholt, aber abgerechnet |     8|        0|        8|            10| +2 |
 |nichts bestellt, aber 3 entnommen             |      10|        0|       10|             7| -3 |
+|1 vorhanden, bestellt, aber nicht abgerechnet und nicht abgeholt  |  1|  1|  0|          1| +1 |
+|ein Artikel wurde entnommen ohne bestellt zu werden  |  1|      0|  1|          0| -1 |
+
+
+> Es gibt einige Situationen, wo der tatsächlich Lagerstand und der verfügbare, beim Bestellen angezeigte, Lagerstand nicht übereinstimmen. Das kann dazu (ver-)führen, dass Artikel aus dem Lager entnommen werden, obwohl sie nicht verfügbar sind.  In der Lagerbestellung ist die verfügbare Anzahl 0 oder der Artikel scheint gar nicht auf, weil jemand anderer hat sie schon bestellt, aber noch nicht abgeholt. Dadurch ist der Artikel im Lager vorhanden, lässt sich aber nicht bestellen. Obwohl in dieser Situation der Artikel nicht aus dem Lager entnommen werden darf, passiert es trotzdem.  Umgekehrt kann es passieren, dass Artikel entnommen werden, ohne bestellt worden zu sein, z.B. weil die Bestellung nicht gespeichert wurde oder ein anderer Artikel entnommen wird als bestellt wurde. In dem Fall passiert es dann, dass ein bestellter und laut Foodsoft verfügbarer Artikel im Lager nicht vorhanden ist. 
+{.is-warning}
 
 
 ## Detailansicht Lagerartikel
