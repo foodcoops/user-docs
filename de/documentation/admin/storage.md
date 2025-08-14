@@ -2,7 +2,7 @@
 title: Lager
 description: Verwalten des Foodcoop-Lagers und Produktinventars (Menü: "Artikel" > "Lager")
 published: true
-date: 2025-08-14T22:12:30.108Z
+date: 2025-08-14T22:25:16.650Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:55:48.199Z
@@ -99,7 +99,10 @@ Unter **Artikel > Lager** auf die Bezeichnung eines Artikels klicken, um zur Det
 
 ### Artikel Bearbeiten
 
-Nur Name, Einheit, Kategorie und Notiz können bearbeitet werden. Preis, Mwst und Pfand können nicht bearbeitet werden, dazu muss eine Kopie des Artikels angelegt werden. Der Lagerstand eines Artikels kann ebenfalls nicht bearbeitet werden, aber durch eine Inventur angepassst werden. 
+Nur Name, Einheit, Kategorie und Notiz können bearbeitet werden. Preis, Mwst und Pfand können nicht bearbeitet werden, dazu muss eine Kopie des Artikels angelegt werden. Der Artikel muss einen anderen Namen haben. Dazu kann z.B. im neuen Artikel Jahr und Monat in der Form 2025-08 hinzugefügt werden, damit klar ist, welcher der aktuelle ist. 
+> Der Lagerstand eines Artikels kann ebenfalls nicht bearbeitet werden, aber durch eine **Inventur** angepassst werden. 
+{.is-info}
+
 
 
 ### Verlauf des Lagerbestands
@@ -116,6 +119,17 @@ Lieferantin und Artikel anlegen: siehe [Lieferantinnen](/de/documentation/admin/
 
 > Lagerartikel können erst neu angelegt oder von der Lieferantin in die Lagerartikelliste übernommen werden, wenn eine konkrete Lieferung erfolgt, siehe unten.
 {.is-info}
+
+## Lagerartikel löschen
+Wenn ein Artikel nicht mehr benötigt wird, indem der Bestand 0 ist und der Artikel zu diesem Preis nicht mehr ins Lager geliefert werden wird, sollte er gelöscht werden. Er scheint zwar bei Lager Bestellungen nicht auf, jedoch z.B. bei der Inventur, was dann mit der Zeit unübersichtlich wird, wenn mehrere ähnliche Artikel existieren, von denen die meisten jedoch nicht mehr verwendet werden. 
+
+> Nach dem Löschen ist der Artikel in der Foodsoft nicht mehr sichtbar, aber in der Datenbank weiterhin vorhanden und kann so auch wieder hergestellt werden. 
+{.is-warning}
+
+
+> Wie viele unbenutzte Artikel auf einmal gelöscht werden können, findest du hier: [Datenbank Beispiele: unbenutzte Lagerartikel entfernen](/de/documentation/admin/datenbank#unbenutzte-lagerartikel-entfernen)
+{.is-info}
+
 
 # Lagerartikel bei Lieferantin bestellen
 
