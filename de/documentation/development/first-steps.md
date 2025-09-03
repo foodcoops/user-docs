@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-04-29T07:13:46.511Z
+date: 2025-09-03T08:00:44.118Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -22,8 +22,12 @@ Die Foodsoft ist eine frei zugängliche Software, geschrieben in der Sprache Rub
 Folgende Links führen zu den Github Repositories:
 - https://github.com/foodcoops/foodsoft – der Hauptzweig der Foodsoft. Sobald du dich registrierst und selbst Änderungen durchführst, solltest du einen Fork für deine Änderungen anlegen, der dann unter https://github.com/DEIN_GITHUB_BENUTZERNAME/foodsoft erreichbar ist.
    - Dokumentation zur Foodsoft Entwicklung: https://github.com/foodcoops/foodsoft/tree/master/doc
+   - Dokumentation der Artikel-System Überarbeitung 2025: https://github.com/foodcoops/foodsoft/blob/feature/1058-extended-article-units/doc/article_units_fork_architecture_changes.md
 - https://github.com/foodcoopsat/foodsoft – eine Abspaltung („Fork“) des Hauptzweigs, der den Stand der Foodsoft am IG Foodcoops Server (https://app.foodcoops.at/...) wiederspiegeln sollte. Manche Erweiterungen sind hier für die österreichischen Foodcoops integriert, die für Foodcoops in anderen Ländern nicht „relevant“ sind.
 - https://github.com/bankproxy - Erweiterung für Bankanbindung österreichische Banken
+
+
+
 # Installation der Foodsoft
 
 ## Anleitungen auf Github
