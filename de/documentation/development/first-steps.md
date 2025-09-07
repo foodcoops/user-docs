@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T20:47:23.778Z
+date: 2025-09-07T20:48:19.515Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -126,7 +126,9 @@ Allgemeine Einführungen zum Ruby Framework für Web-Applikationen:
 
 https://github.com/foodcoop-adam/foodcoop-adam.github.io/blob/developer-docs/design_diagrams/201404-generated_erd_v3.pdf
 
-Die Foodsoft baut auf eine Datenbank mit > 50 Tabellen auf. Die Struktur dieser Datenbank ist im Programmcode großteils nicht definiert, man muss also immer den Code und die Datenbank gemeinsam lesen, um alle verfügbaren Daten und ihre Bezeichnungen zu wissen. 
+> Die Foodsoft baut auf eine Datenbank mit > 50 Tabellen auf. Die Struktur dieser Datenbank ist im Programmcode großteils nicht definiert, man muss also immer den Code und die Datenbank gemeinsam lesen, um alle verfügbaren Daten und ihre Bezeichnungen zu wissen. 
+{.is-info}
+
 
 # Foodsoft Dateistruktur
 
