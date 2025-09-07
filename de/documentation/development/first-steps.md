@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T16:18:47.111Z
+date: 2025-09-07T16:50:35.009Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -81,7 +81,6 @@ Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabelle
     - active_storage_variant_records 
     - documents 
     - mail_delivery_status 
-    - memberships 
     - messages 
     - message_recipients 
     - page_versions 
