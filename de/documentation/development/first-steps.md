@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T20:07:35.444Z
+date: 2025-09-07T20:39:14.792Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -212,10 +212,20 @@ https://github.com/foodcoop-adam/foodcoop-adam.github.io/blob/developer-docs/des
 https://github.com/foodcoops/foodsoft/ 
 
 Wo ist im Code was zu finden? 
-- Datenbank Spezifikationen: app/models/...
-  - Zeichenanzahl  Begrenzungen für Eingabefelder
-  - Überprüfungen von Eingaben: z.B. unique (Name darf nur einmal vergeben werden, z.B. bei Artikelnamen)
-- Übersetzungstexte für deutsche Foodsoft Version bearbeitbar über
+
+## app/models/
+Datenbank Spezifikationen: app/models/...
+- Zeichenanzahl  Begrenzungen für Eingabefelder
+- Überprüfungen von Eingaben: z.B. unique (Name darf nur einmal vergeben werden, z.B. bei Artikelnamen)
+
+## app/views/
+Hier werden die einzelnen Websites der Foodsoft über .haml Dateien definiert. Die Foodosoft Seite https://app.foodcoops.at/fc-name/finance/balancing findet sich z.B. in apps/views/finance/balancing. Zum Aufbau der Seiteninhalte greifen diese Files auf Datenbank Einträge und Foodsoft Methoden (Funktionen) zu. Das ist oft ein guter Einstieg, um Code aufzufinden. 
+
+## app/controllers/
+Hier finden Datenverarbeitungen statt. /app/controllers/orders_controller.rb enthält z.B. Methoden, um Bestellungen zu beenden (finish), und sie an die Lieferantin zu senden (send_result_to_supplier).  
+
+## config/
+Übersetzungstexte für deutsche Foodsoft Version bearbeitbar über
   - https://crowdin.com/translate/foodsoft/ - wird nur 1-2 mal im Jahr übernommen, wenn ein „echtes Release“ herauskommt
   - `config/locales/de.yml` 
 
