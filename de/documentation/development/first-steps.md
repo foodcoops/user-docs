@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-03T08:00:44.118Z
+date: 2025-09-07T15:27:24.622Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -22,12 +22,8 @@ Die Foodsoft ist eine frei zugängliche Software, geschrieben in der Sprache Rub
 Folgende Links führen zu den Github Repositories:
 - https://github.com/foodcoops/foodsoft – der Hauptzweig der Foodsoft. Sobald du dich registrierst und selbst Änderungen durchführst, solltest du einen Fork für deine Änderungen anlegen, der dann unter https://github.com/DEIN_GITHUB_BENUTZERNAME/foodsoft erreichbar ist.
    - Dokumentation zur Foodsoft Entwicklung: https://github.com/foodcoops/foodsoft/tree/master/doc
-   - Dokumentation der Artikel-System Überarbeitung 2025: https://github.com/foodcoops/foodsoft/blob/feature/1058-extended-article-units/doc/article_units_fork_architecture_changes.md
 - https://github.com/foodcoopsat/foodsoft – eine Abspaltung („Fork“) des Hauptzweigs, der den Stand der Foodsoft am IG Foodcoops Server (https://app.foodcoops.at/...) wiederspiegeln sollte. Manche Erweiterungen sind hier für die österreichischen Foodcoops integriert, die für Foodcoops in anderen Ländern nicht „relevant“ sind.
 - https://github.com/bankproxy - Erweiterung für Bankanbindung österreichische Banken
-
-
-
 # Installation der Foodsoft
 
 ## Anleitungen auf Github
@@ -54,9 +50,53 @@ Folgende Links führen zu den Github Repositories:
 
 ## Datenbank importieren
 
-Wenn du ein Abbild deiner Foodsoft-Datenbank als `datenbank.sql` Datei hast, kannst du es in deine lokale Installation einpielen:
-- nach manueller Installation der Foodsoft und bei Verwendung einer mysql Datenbank: `mysql –u root –p foodsoft_development < datenbank.sql`
-- Foodsoft Installation über Docker: ... (noch zu beschreiben) ...
+Wenn du ein Abbild deiner Foodsoft-Datenbank als `datenbank.sql` Datei hast, kannst du es in deine lokale Installation einspielen:
+
+### Manuelle Foodsoft Installation
+Nach manueller Installation der Foodsoft und bei Verwendung einer mysql Datenbank: 
+`mysql –u root –p foodsoft_development < datenbank.sql`
+
+### Docker Foodsoft Installation
+- Über MySql die Datenbank der Foodosft exportieren: über PhpMyAdmin auf die [Datenbank der Foodcoop](/de/documentation/admin/datenbank) gehen *foodcoop_...* Exportieren mit den Optionen:
+  - Exportmethode: Angepasst
+  - Export in einer Transaktion zusammenfassen
+  - Fremdschlüsselüberprüfung deaktivieren (?)
+  - Tabellen: bei nicht benötigten und große Tabellen *Daten* weggklicken, z.B.:
+    - action_text_rich_texts 
+    - active_storage_attachments 
+    - active_storage_blobs 
+    - active_storage_variant_records 
+    - documents 
+    - mail_delivery_status 
+    - memberships 
+    - messages 
+    - message_recipients 
+    - page_versions 
+    - periodic_task_groups 
+    - poll_choices 
+    - poll_choices2 
+    - poll_votes 
+    - poll_votes2 
+    - printer_jobs 
+    - printer_job_updates 
+  - Dateiname z.B: `foodsoft_fcname.sql`
+- Die lokale Foodsoft Instanz starten und aus der Zeile
+  `Starting 018f6f520723_foodsoft_mariadb_1         ... done`
+  die Bezeichnung der mariadb Dockerinstanz kopieren, hier: `018f6f520723_foodsoft_mariadb_1`
+- PhpMyAdmin in der lokalen Instanz starten im Webbrowser über die Url [localhost:2080](http://localhost:2080)
+  - Die Datenbank development umbenennen in development_original 
+  - eine neue leere Datenbank mit dem Namen development erstellen 
+- In einem zweiten Terminal eingeben (die laufende Docker-Instanz im ersten Terminal nicht beenden) und nach `-i` die Dockerinstanz von vorhin hineinkopieren: 
+  `docker exec -i 018f6f520723_foodsoft_mariadb_1 mysql -uroot -psecret development < dump.sql`
+
+
+
+
+
+
+
+
+
 
 <!--
 ## Anleitung für Ubuntu Linux über Docker
