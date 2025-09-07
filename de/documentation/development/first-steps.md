@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T20:39:14.792Z
+date: 2025-09-07T20:47:23.778Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -112,87 +112,6 @@ Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabelle
 
 
 
-
-<!--
-## Anleitung für Ubuntu Linux über Docker
-
-> Diese Anleitung ist möglicherweise unvollständig und wurde schon länger nicht mehr getestet.
-{.is-warning}
-
-
-### Installation
-1. Docker Engine installieren:  https://docs.docker.com/engine/install/ubuntu/ 
-2. Docker Compose installieren: https://docs.docker.com/compose/install/ > Linux (Aktuelle Version 1.28 oder ähnlich ist höher als erforderliche Version 1.4)
-3. Docker so konfigurieren, dass es die nötigen Berechtigungen hat: https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user 
-4. Computer neu starten, damit Änderungen wirksam werden, zum Testem `docker run hello-world` ausführen, es dürfen keine Fehlermeldungen kommen 
-5. Github installieren mit `sudo apt-get install git`, siehe auch https://git-scm.com/download/linux 
-<!---
-# Nokogiri needs libxml2 and libxslt: https://stackoverflow.com/questions/25963315/nokogiri-installation-failes-on-elastic-beanstalk
-sudo snap install libxslt
-sudo apt-get install libxml2 
-# libxml2 ist schon die neueste Version (2.9.10+dfsg-5ubuntu0.20.04.1).
-
-# Gemfile changed: https://stackoverflow.com/questions/66919504/your-bundle-is-locked-to-mimemagic-0-3-5-but-that-version-could-not-be-found
-bundle install --no-deployment 
-
-# can't find header files for ruby at /usr/lib/ruby/include/ruby.h
-# You might have to install separate package for the ruby development
-# environment, ruby-dev or ruby-devel for example.
-sudo apt-get install ruby-dev
-sudo gem install nokogiri -v '1.10.10' --source 'https://rubygems.org/'
-bundle install --no-deployment
-
-sudo apt-get install magic
-sudo gem install ruby-filemagic -v '0.7.2' --source 'https://rubygems.org/'
-Building native extensions. This could take a while...
-ERROR:  Error installing ruby-filemagic:
-	ERROR: Failed to build gem native extension.
-
-    current directory: /var/lib/gems/2.7.0/gems/ruby-filemagic-0.7.2/ext/filemagic
-/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20211128-45197-1g8m0o0.rb extconf.rb
-checking for -lgnurx... no
-checking for magic_open() in -lmagic... no
-*** ERROR: missing required library to compile this module
-*** extconf.rb failed ***
-Could not create Makefile due to some reason, probably lack of necessary
-libraries and/or headers.  Check the mkmf.log file for more details.  You may need configuration options.
--- >
-6. Auf Github registrieren: Grundsätzlich kannst du dir den Quelltext mit „Download“ auch einfach herunterladen, um die Foodsoft lokal bei dir zu installieren. Sobald du jedoch veränderte Quellcodes wieder auf Github hochladen möchtest, kommt es zu  Problemen, wenn die Foodsoft in der Zwischenzeit durch andere auf Github verändert wurde. Daher zahlt es sich aus, den Quellcode gleich ordentlich „abzuzweigen“, sodass dann zu einem späteren Zeitunkt auch wieder ein reibungsloses Hochladen von Änderungen (push) möglich ist.
-7. Fork erzeugen: diese sollte dann über `https://github.com/YOUR_USERNAME/oodsoft.git` ansprechbar sein
-8. Fork der Foodsoft herunterladen mit `git clone https://github.com/YOUR_USERNAME/foodcoops/foodsoft.git`
-9. Docker Compose aus dem Verzeichnis `foodsoft` aufrufen (dort befindet sich die Datei `docker-compose-dev.yml`), wie unter Setup beschrieben: https://github.com/foodcoops/foodsoft/blob/master/doc/SETUP_DEVELOPMENT_DOCKER.md 
-     - `docker-compose -f docker-compose-dev.yml up -d mariadb`
-     - `docker-compose -f docker-compose-dev.yml run --rm foodsoft bundle install`
-> Hier kommt es zu Warnungen und anschließend zu einer Fehlermeldung bei mir (Mirko, 28.11.2021): 
-{.is-danger}
-
-```
-Step 9/13 : RUN bundle config build.nokogiri "--use-system-libraries" &&     bundle install --frozen -j 4
- -- -> Running in 48e2f58af9a7
-Warning: the running version of Bundler (1.17.2) is older than the version that created the lockfile (1.17.3). We suggest you upgrade to the latest version of Bundler by running `gem install bundler`.
-Fetching gem metadata from https://rubygems.org/........
-Your bundle is locked to mimemagic (0.3.5), but that version could not be found
-in any of the sources listed in your Gemfile. If you haven't changed sources,
-that means the author of mimemagic (0.3.5) has removed it. You'll need to update
-your bundle to a version other than mimemagic (0.3.5) that hasn't been removed
-in order to install.
-ERROR: Service 'foodsoft' failed to build : The command '/bin/sh -c bundle config build.nokogiri "--use-system-libraries" &&     bundle install --frozen -j 4' returned a non-zero code: 16
-```
-
-     - `docker-compose -f docker-compose-dev.yml run --rm foodsoft bundle exec rake  foodsoft:setup_development_docker`
-     - `docker-compose -f docker-compose-dev.yml run --rm foodsoft bundle exec rake db:schema:load db:seed:small.en`
-
-### Lokale Instanz starten
-1. Foodsoft „lokalen Server starten“: `docker-compose -f docker-compose-dev.yml up`
-2. Falls es beim ersten Mal nach der Installation zu Fehlermeldungen kommt, den Computer neu starten und Schritt 1 wiederholen
-3. Aufruf der lokalen Instanz im Webbrowser:  http://localhost:3000 
-4. Anmelden mit Benutzer `admin` und Passwort `secret`
-
-### Github mit SSH-Verbindung einrichten
-1. https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh 
-2. https://docs.github.com/en/github/using-git/changing-a-remotes-url#switching-remote-urls-from-https-to-ssh 
--->
-
 # Ruby on Rails 
 Allgemeine Einführungen zum Ruby Framework für Web-Applikationen:
 - https://www.tutorialspoint.com/ruby-on-rails/rails-introduction.htm 
@@ -206,6 +125,8 @@ Allgemeine Einführungen zum Ruby Framework für Web-Applikationen:
 # Foodsoft Daten Struktur
 
 https://github.com/foodcoop-adam/foodcoop-adam.github.io/blob/developer-docs/design_diagrams/201404-generated_erd_v3.pdf
+
+Die Foodsoft baut auf eine Datenbank mit > 50 Tabellen auf. Die Struktur dieser Datenbank ist im Programmcode großteils nicht definiert, man muss also immer den Code und die Datenbank gemeinsam lesen, um alle verfügbaren Daten und ihre Bezeichnungen zu wissen. 
 
 # Foodsoft Dateistruktur
 
