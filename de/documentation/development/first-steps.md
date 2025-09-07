@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T20:48:19.515Z
+date: 2025-09-07T20:51:19.430Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -57,7 +57,11 @@ Nach manueller Installation der Foodsoft und bei Verwendung einer mysql Datenban
 `mysql –u root –p foodsoft_development < datenbank.sql`
 
 ### Docker Foodsoft Installation
-Sowohl PhpMyAdmin als auch der direkte Aufruf von mysql haben Probleme beim direkten Import der Foodsoft Datenbank, wenn diese etwas größer ist (was schnell mal der Fall ist, Beispiel wo es nicht funktioniert hat: Gesamexport ergibt 510 MB großes SQL-File). Eine Möglichkeit wäre, die Limits in der Docker-Umgebung entsprechend zu erhöhen, aber das erfordert recht tiefgehende Kenntnisse. Im docker-compose-dev.yml entsprechende Zeilen einzufügen (Zeile 7,8 im Beispiel unten), führen beim Neustart der Docker-Umgebung zu einem Fehler und kann in weiterer Folge dazu führen, dass die ganze Docker-Umgebung nicht mehr läuft:
+Sowohl PhpMyAdmin als auch der direkte Aufruf von mysql haben Probleme beim direkten Import der Foodsoft Datenbank, wenn diese etwas größer ist (was schnell mal der Fall ist, Beispiel wo es nicht funktioniert hat: Gesamexport ergibt 510 MB großes SQL-File). 
+
+> Eine Möglichkeit wäre, die Limits in der Docker-Umgebung entsprechend zu erhöhen, aber das erfordert recht tiefgehende Kenntnisse. Im `docker-compose-dev.yml` entsprechende Zeilen einzufügen (Zeile 7,8 im Beispiel unten), führen beim Neustart der Docker-Umgebung zu einem Fehler und kann in weiterer Folge dazu führen, dass die ganze Docker-Umgebung nicht mehr läuft!
+{.is-warning}
+
 ```
   phpmyadmin:
   image: phpmyadmin/phpmyadmin
@@ -70,7 +74,7 @@ Sowohl PhpMyAdmin als auch der direkte Aufruf von mysql haben Probleme beim dire
 ```
 Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabellen zu exportieren und vor allem große Tabellen weg zu lassen, dadurch ist im Beispiel die SQL-File Gröe von 510 auf etwa 50 MB gesunken.
 
-- Über MySql die Datenbank der Foodosft exportieren: über PhpMyAdmin auf die [Datenbank der Foodcoop](/de/documentation/admin/datenbank) gehen *foodcoop_...* Exportieren mit den Optionen:
+- Die mySql Datenbank der Foodosft exportieren: über PhpMyAdmin auf die [Datenbank der Foodcoop](/de/documentation/admin/datenbank) gehen *foodcoop_...* Exportieren mit den Optionen:
   - Exportmethode: Angepasst
   - Export in einer Transaktion zusammenfassen
   - Fremdschlüsselüberprüfung deaktivieren (?)
