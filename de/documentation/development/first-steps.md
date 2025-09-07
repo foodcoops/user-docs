@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T20:52:34.451Z
+date: 2025-09-07T20:56:07.312Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -108,6 +108,8 @@ Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabelle
 - In einem zweiten Terminal eingeben (die laufende Docker-Instanz im ersten Terminal nicht beenden) und nach `-i` die Dockerinstanz von vorhin hineinkopieren: 
   `docker exec -i 018f6f520723_foodsoft_mariadb_1 mysql -uroot -psecret development < foodsoft_fcname.sql`
 
+> Die Einstellungen der Foodosoft in der *settings* Tabelle werden nicht übernommen - eventuell weil in den Namen der Einstellungen der Foodcoop-Name vorkommt, aber in der lokalen Installation nicht?
+{.is-danger}
 
 
 
