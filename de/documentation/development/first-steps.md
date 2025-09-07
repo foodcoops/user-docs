@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T15:37:51.153Z
+date: 2025-09-07T15:39:03.671Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -57,7 +57,7 @@ Nach manueller Installation der Foodsoft und bei Verwendung einer mysql Datenban
 `mysql –u root –p foodsoft_development < datenbank.sql`
 
 ### Docker Foodsoft Installation
-Sowohl PhpMyAdmin als auch der direkte Aufruf von mysql haben Probleme beim direkten Import der Foodsoft Datenbank, wenn diese etwas größer ist (was schnell mal der Fall ist, Beispiel wo es nicht funktioniert hat: Gesamexport 510 MB ergibt großes SQL File). Eine Möglichkeit wäre, die Limits in der Docker-Umgebung entsprechend zu erhöhen, aber das erfordert recht tiefgehende Kenntnisse. Im docker-compose-dev.yml entsprechende Zeilen einzufügen, füher beim Neustart der Docker-Umgebung zu einem Fehler und kann in weiterer Folge dazu führen, dass die ganze Docker-Umgebung nicht mehr läuft:
+Sowohl PhpMyAdmin als auch der direkte Aufruf von mysql haben Probleme beim direkten Import der Foodsoft Datenbank, wenn diese etwas größer ist (was schnell mal der Fall ist, Beispiel wo es nicht funktioniert hat: Gesamexport ergibt 510 MB großes SQL-File). Eine Möglichkeit wäre, die Limits in der Docker-Umgebung entsprechend zu erhöhen, aber das erfordert recht tiefgehende Kenntnisse. Im docker-compose-dev.yml entsprechende Zeilen einzufügen, füher beim Neustart der Docker-Umgebung zu einem Fehler und kann in weiterer Folge dazu führen, dass die ganze Docker-Umgebung nicht mehr läuft:
 ```
   phpmyadmin:
   image: phpmyadmin/phpmyadmin
