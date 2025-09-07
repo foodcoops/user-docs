@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T16:16:19.121Z
+date: 2025-09-07T16:18:47.111Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -68,6 +68,7 @@ Sowohl PhpMyAdmin als auch der direkte Aufruf von mysql haben Probleme beim dire
     - UPLOAD_LIMIT=900M
     - MEMORY_LIMIT=1G
 ```
+Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabellen zu exportieren und vor allem große Tabellen weg zu lassen, dadurch ist im Beispiel die SQL-File Gröe von 510 auf etwa 50 MB gesunken.
 
 - Über MySql die Datenbank der Foodosft exportieren: über PhpMyAdmin auf die [Datenbank der Foodcoop](/de/documentation/admin/datenbank) gehen *foodcoop_...* Exportieren mit den Optionen:
   - Exportmethode: Angepasst
