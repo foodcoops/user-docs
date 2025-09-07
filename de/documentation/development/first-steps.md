@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T15:27:24.622Z
+date: 2025-09-07T15:28:08.899Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -87,7 +87,7 @@ Nach manueller Installation der Foodsoft und bei Verwendung einer mysql Datenban
   - Die Datenbank development umbenennen in development_original 
   - eine neue leere Datenbank mit dem Namen development erstellen 
 - In einem zweiten Terminal eingeben (die laufende Docker-Instanz im ersten Terminal nicht beenden) und nach `-i` die Dockerinstanz von vorhin hineinkopieren: 
-  `docker exec -i 018f6f520723_foodsoft_mariadb_1 mysql -uroot -psecret development < dump.sql`
+  `docker exec -i 018f6f520723_foodsoft_mariadb_1 mysql -uroot -psecret development < foodsoft_fcname.sql`
 
 
 
