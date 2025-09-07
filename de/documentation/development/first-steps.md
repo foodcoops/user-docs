@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T16:50:35.009Z
+date: 2025-09-07T20:07:35.444Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -74,23 +74,26 @@ Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabelle
   - Exportmethode: Angepasst
   - Export in einer Transaktion zusammenfassen
   - Fremdschlüsselüberprüfung deaktivieren (?)
-  - Tabellen: bei nicht benötigten und große Tabellen *Daten* weggklicken, z.B.:
-    - action_text_rich_texts 
-    - active_storage_attachments 
-    - active_storage_blobs 
-    - active_storage_variant_records 
-    - documents 
-    - mail_delivery_status 
-    - messages 
-    - message_recipients 
-    - page_versions 
-    - periodic_task_groups 
-    - poll_choices 
-    - poll_choices2 
-    - poll_votes 
-    - poll_votes2 
-    - printer_jobs 
-    - printer_job_updates 
+  - Tabellen: bei großen Tabellen *Daten* weggklicken, hier mit % der Datenbelegung einer exemplarischen Foodcoop Instanz (kursiv dargestellte sind für die Bestellabläufe essenziell, daher eher nicht weglassen). Beim Exportieren kann sich der Speicherplatzbedarf noch verändern, da binäre Daten als ASCII Zeichen kodiert werden:
+    - documents : 50 %
+    - messages : 9 %
+    - message_recipients : 6 %
+    - *order_articles* : 6 %
+    - *group_order_articles* : 6 %
+    - action_text_rich_texts : 4 %
+    - page_versions : 3 %
+    - *financial_transactions* : 3 %
+    - *group_order_article_quantities* : 3 %
+    - *group_orders* : 2 %
+    - *stock_changes* : 1 %
+    - mail_delivery_status : 1 %
+    - *articles* : 1 %
+    - oauth_access_grants : 1 %
+    - *article_prices* : 1 %
+    - *orders* : 1 %
+    - pages : 1 %
+  - nicht benötigte Tabellen können auch weg gecklickt werden, wenn z.B. sie beim Importieren Probleme machen. Einzelne Tabellen können auch später nachgeladen werden.
+  
   - Dateiname z.B: `foodsoft_fcname.sql`
 - Die lokale Foodsoft Instanz starten und aus der Zeile
   `Starting 018f6f520723_foodsoft_mariadb_1         ... done`
