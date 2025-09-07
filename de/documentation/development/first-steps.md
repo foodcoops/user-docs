@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T15:28:08.899Z
+date: 2025-09-07T15:37:51.153Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -57,6 +57,18 @@ Nach manueller Installation der Foodsoft und bei Verwendung einer mysql Datenban
 `mysql –u root –p foodsoft_development < datenbank.sql`
 
 ### Docker Foodsoft Installation
+Sowohl PhpMyAdmin als auch der direkte Aufruf von mysql haben Probleme beim direkten Import der Foodsoft Datenbank, wenn diese etwas größer ist (was schnell mal der Fall ist, Beispiel wo es nicht funktioniert hat: Gesamexport 510 MB ergibt großes SQL File). Eine Möglichkeit wäre, die Limits in der Docker-Umgebung entsprechend zu erhöhen, aber das erfordert recht tiefgehende Kenntnisse. Im docker-compose-dev.yml entsprechende Zeilen einzufügen, füher beim Neustart der Docker-Umgebung zu einem Fehler und kann in weiterer Folge dazu führen, dass die ganze Docker-Umgebung nicht mehr läuft:
+```
+  phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  environment:
+    - PMA_HOST=mariadb
+    - PMA_USER=root
+    - PMA_PASSWORD=secret
+    - UPLOAD_LIMIT=900M
+    - MEMORY_LIMIT=1G
+```
+
 - Über MySql die Datenbank der Foodosft exportieren: über PhpMyAdmin auf die [Datenbank der Foodcoop](/de/documentation/admin/datenbank) gehen *foodcoop_...* Exportieren mit den Optionen:
   - Exportmethode: Angepasst
   - Export in einer Transaktion zusammenfassen
@@ -84,8 +96,8 @@ Nach manueller Installation der Foodsoft und bei Verwendung einer mysql Datenban
   `Starting 018f6f520723_foodsoft_mariadb_1         ... done`
   die Bezeichnung der mariadb Dockerinstanz kopieren, hier: `018f6f520723_foodsoft_mariadb_1`
 - PhpMyAdmin in der lokalen Instanz starten im Webbrowser über die Url [localhost:2080](http://localhost:2080)
-  - Die Datenbank development umbenennen in development_original 
-  - eine neue leere Datenbank mit dem Namen development erstellen 
+  - Die Datenbank *development* umbenennen in *development_original* 
+  - eine neue leere Datenbank mit dem Namen *development* erstellen 
 - In einem zweiten Terminal eingeben (die laufende Docker-Instanz im ersten Terminal nicht beenden) und nach `-i` die Dockerinstanz von vorhin hineinkopieren: 
   `docker exec -i 018f6f520723_foodsoft_mariadb_1 mysql -uroot -psecret development < foodsoft_fcname.sql`
 
