@@ -2,7 +2,7 @@
 title: Leitfaden Foodosoft Dokumentation
 description: Leitfaden zur Bearbeitung von Beiträgen dieser Foodosoft Dokumentation
 published: true
-date: 2025-09-09T21:23:57.102Z
+date: 2025-09-09T21:25:25.054Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-06T10:35:36.615Z
@@ -49,7 +49,6 @@ Während im Preview Text/Code-Felder gut lesbar sind und Zeilennummern enthalten
 <script> // 2025-08 by MJ: change pre layout in page view to be similar to preview layout 
 window.onload = function() {
   let elements = document.getElementsByTagName("pre"); 
-  // console.log("elements: " + elements.length);
   for (let e of elements) {
     e.classList.add("prismjs");
     e.classList.add("line-numbers");
