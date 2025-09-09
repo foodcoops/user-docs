@@ -2,7 +2,7 @@
 title: Leitfaden Foodosoft Dokumentation
 description: Leitfaden zur Bearbeitung von Beiträgen dieser Foodosoft Dokumentation
 published: true
-date: 2025-04-29T06:43:38.514Z
+date: 2025-09-09T21:23:24.788Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-06T10:35:36.615Z
@@ -41,6 +41,33 @@ Die Funktionsweise des verwendeten Wiki JS ist unter https://docs.requarks.io be
 
 > Die Hauptsprache muss auf Niederländisch eingestellt sein, damit *... (Mario bitte ergänzen, das war damit das Klonen funktioniert, oder?) ...* Für Änderungen in den Einstellungen kann sie vorübergehend auf Deutsch oder Englisch umgestellt werden. 
 {.is-warning}
+
+
+## Darstellung von Text/Code Feldern
+Während im Preview Text/Code-Felder gut lesbar sind und Zeilennummern enthalten, sind sie in der Seitenansicht schwerer lesbar und enthalten keine Zeilennummern. Der Folgende HTML/Javascript Code ist unter den Wiki-JS Einstellungen unter Thema > Code-injectie > Head HTML eingefügt, um das Layout auch im Seitenmodus wie im Preview zu haben:
+```
+<script> // 2025-08 by MJ: change pre layout in page view to be similar to preview layout 
+window.onload = function() {
+  let elements = document.getElementsByTagName("pre"); 
+  // console.log("elements: " + elements.length);
+  for (let e of elements) {
+    e.classList.add("prismjs");
+    e.classList.add("line-numbers");
+    let code = e.firstChild;
+    const n_lines = code.innerText.split(/\r\n|\r|\n/).length;
+    const node = document.createElement("span");
+    node.setAttribute('aria-hidden', 'true');
+    node.className = 'line-numbers-rows';
+    for(i=0; i<n_lines; i++) {
+      const childnode = document.createElement("span");
+      node.appendChild(childnode);
+    }
+    code.appendChild(node);
+  }
+};
+</script>
+```
+
 
 # Struktur
 
