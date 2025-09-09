@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-07T20:56:07.312Z
+date: 2025-09-09T21:17:17.360Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -96,7 +96,7 @@ Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabelle
     - *article_prices* : 1 %
     - *orders* : 1 %
     - pages : 1 %
-  - nicht benötigte Tabellen können auch weg gecklickt werden, wenn z.B. sie beim Importieren Probleme machen. Einzelne Tabellen können auch später nachgeladen werden.
+  - nicht benötigte Tabellen können auch weg gecklickt werden, wenn z.B. sie beim Importieren Probleme machen. Einzelne Tabellen können auch später nachgeladen werden. Im Beispiel hat es funktioniert, indem die Daten der Tabellen *documents, messages und messages_recepients* weg gelassen wurden: documents aufgrund der hohen Datenmenge, messages weil es Probleme mit den importierten Daten gab. 
   
   - Dateiname z.B: `foodsoft_fcname.sql`
 - Die lokale Foodsoft Instanz starten und aus der Zeile
