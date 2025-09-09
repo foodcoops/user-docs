@@ -2,7 +2,7 @@
 title: Leitfaden Foodosoft Dokumentation
 description: Leitfaden zur Bearbeitung von Beiträgen dieser Foodosoft Dokumentation
 published: true
-date: 2025-09-09T21:23:24.788Z
+date: 2025-09-09T21:23:57.102Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-06T10:35:36.615Z
@@ -44,7 +44,7 @@ Die Funktionsweise des verwendeten Wiki JS ist unter https://docs.requarks.io be
 
 
 ## Darstellung von Text/Code Feldern
-Während im Preview Text/Code-Felder gut lesbar sind und Zeilennummern enthalten, sind sie in der Seitenansicht schwerer lesbar und enthalten keine Zeilennummern. Der Folgende HTML/Javascript Code ist unter den Wiki-JS Einstellungen unter Thema > Code-injectie > Head HTML eingefügt, um das Layout auch im Seitenmodus wie im Preview zu haben:
+Während im Preview Text/Code-Felder gut lesbar sind und Zeilennummern enthalten, sind sie in der Seitenansicht schwerer lesbar und enthalten keine Zeilennummern. Der Folgende HTML/Javascript Code ist unter den Wiki-JS Einstellungen unter *Thema > Code-injectie > Head HTML* eingefügt, um das Layout auch im Seitenmodus wie im Preview zu haben:
 ```
 <script> // 2025-08 by MJ: change pre layout in page view to be similar to preview layout 
 window.onload = function() {
