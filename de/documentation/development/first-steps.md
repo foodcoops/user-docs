@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-10T08:18:56.894Z
+date: 2025-09-10T08:24:05.143Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -117,6 +117,8 @@ UPDATE settings
 SET var = REPLACE(var, 'foodcoop.franckkistl.', 'foodcoop.f.')
 WHERE var LIKE 'foodcoop.franckkistl.%';
 ```
+> Der Name der FoodCoop kommt 2 Mal vor (Zeile 2 und 3) und muss an beiden Stellen durch den zutreffenden werden!
+{.is-warning}
 
 
 
