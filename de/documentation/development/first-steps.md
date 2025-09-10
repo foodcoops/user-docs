@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-10T08:24:05.143Z
+date: 2025-09-10T08:25:59.631Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -110,14 +110,14 @@ Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabelle
 
 
 ### Settings anpassen
-Die Einstellungen der Foodosoft in der *settings* Tabelle werden beim Import nicht übernommen, weil in den Namen der Einstellungen (settings > var) der Foodcoop-Name vorkommt, aber in der lokalen Installation wird "f" als Foodcoop Bezeichnung verwendet. In der lokalen Datenbank kann das in phpMyAdmin mit dem folgenden SQL Befehl angepasst werden, hier im Beispiel für die Foodcoop *franckkistl*:
+Die Einstellungen der Foodsoft in der *settings* Tabelle werden beim Import nicht übernommen, weil in den Namen der Einstellungen (settings > var) der FoodCoop-Name vorkommt, aber in der lokalen Installation wird "f" als FoodCoop Bezeichnung verwendet. In der lokalen Datenbank kann das in phpMyAdmin mit dem folgenden SQL-Befehl angepasst werden, hier im Beispiel für die FoodCoop *franckkistl*:
 
 ```
 UPDATE settings
 SET var = REPLACE(var, 'foodcoop.franckkistl.', 'foodcoop.f.')
 WHERE var LIKE 'foodcoop.franckkistl.%';
 ```
-> Der Name der FoodCoop kommt 2 Mal vor (Zeile 2 und 3) und muss an beiden Stellen durch den zutreffenden werden!
+> Der Name der FoodCoop kommt 2 Mal vor (Zeile 2 und 3) und muss an beiden Stellen durch den zutreffenden ersetzt werden!
 {.is-warning}
 
 
