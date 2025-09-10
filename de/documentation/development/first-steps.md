@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-09T21:17:17.360Z
+date: 2025-09-10T08:15:10.359Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -108,8 +108,15 @@ Daher empfihelt sich, wie folgt beschrieben nur die wirklich benötigten Tabelle
 - In einem zweiten Terminal eingeben (die laufende Docker-Instanz im ersten Terminal nicht beenden) und nach `-i` die Dockerinstanz von vorhin hineinkopieren: 
   `docker exec -i 018f6f520723_foodsoft_mariadb_1 mysql -uroot -psecret development < foodsoft_fcname.sql`
 
-> Die Einstellungen der Foodosoft in der *settings* Tabelle werden nicht übernommen - eventuell weil in den Namen der Einstellungen der Foodcoop-Name vorkommt, aber in der lokalen Installation nicht?
-{.is-danger}
+
+### Settings anpassen
+Die Einstellungen der Foodosoft in der *settings* Tabelle werden beim Import nicht übernommen, weil in den Namen der Einstellungen (settings > var) der Foodcoop-Name vorkommt, aber in der lokalen Installation wird "f" als Foodcoop Bezeichnung verwendet. In der lokalen Datenbank kann das in phpMyAdmin mit dem folgenden SQL Befehl angepasst werden, hier im Beispiel fr die Foodcoop *franckkistl*:
+
+```
+UPDATE settings
+SET var = REPLACE(var, 'foodcoop.franckkistl.', 'foodcoop.f.')
+WHERE var LIKE 'foodcoop.franckkistl.%';
+```
 
 
 
