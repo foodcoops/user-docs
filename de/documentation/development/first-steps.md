@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-14T10:33:12.692Z
+date: 2025-09-14T11:16:19.816Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -50,6 +50,14 @@ Folgende Links führen zu den Github Repositories:
   - manuelle Installation:  `bundle exec rails s`
   - Docker: `docker-compose -f docker-compose-dev.yml up`
   - Webbrowser: in beiden Fällen URL `http://localhost:3000/` öffnen, User: admin, Password: secret
+
+### aktuelle Version von app.foodcoops.at lokal installieren
+> Diese Beschreibung ist in Arbeit und noch unvollständig.
+{.is-warning}
+
+- Download github/foodcoopsat/...
+- Download or copy docker-copmpose-dev.yml
+- edit Dockerfile-dev: `RUN ... gosu ..`.
 
 ## Datenbank importieren
 
