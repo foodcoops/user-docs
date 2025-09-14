@@ -2,7 +2,7 @@
 title: Erste Schritte
 description: Foodsoft Installation und Entwicklung
 published: true
-date: 2025-09-10T08:25:59.631Z
+date: 2025-09-14T10:33:12.692Z
 tags: 
 editor: markdown
 dateCreated: 2021-10-01T12:20:11.258Z
@@ -43,6 +43,9 @@ Folgende Links führen zu den Github Repositories:
 - Deinen Branch der Foodsoft herunterladen mit `git clone https://github.com/YOUR_USERNAME/foodsoft.git`; es entsteht im aktuellen Verzeichnis ein Verzeichnis `foodsoft`, das alle benötigten Dateien enthält.
 - Wenn es mit deinem Branch nicht klappt, kannst du auch den Foodsoft-Master als ZIP Datei herunterladen und entpacken. Lokal durchgeführte Änderungen im Code können dann allerdings nicht mehr so einfach auf Github hochgeladen werden.
 - Vor der Installation der Foodsoft (egal ob manuell oder über Docker) nach dem Download in das Verzeichnis wechseln: `cd foodsoft` bzw. `cd foodsoft-master`
+- Datenbank einer FoodCoop statt Testdatenbank laden vor dem Starten der Foodsoft:
+  - Manuelle Installation: *... bitte ergänzen ...*
+  - Docker: `docker-compose -f docker-compose-dev.yml run mariadb  mariadb --host=mariadb --password=secret --execute="DROP DATABASE development; CREATE DATABASE development" development < foodsoft_fcname.sql` (noch nicht getestet, mehr Infos zu Datenbank Import siehe unten)
 - Foodsoft starten: 
   - manuelle Installation:  `bundle exec rails s`
   - Docker: `docker-compose -f docker-compose-dev.yml up`
