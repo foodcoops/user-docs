@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2025-08-13T12:11:20.579Z
+date: 2025-10-07T22:36:53.556Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -263,3 +263,28 @@ AND quantity=0
 AND deleted_at IS NULL;
 ```
 Die Artikel werden nicht gelöscht, es wird nur im Feld  *deleted_at* ein Datum eingetragen, wodurch die Artikel in der Foodsoft nicht mehr aufscheinen. Wenn statt dem Datum wieder NULL eingetragen wird, ist der Artikel wieder sichtbar. Wenn über die Foodsoft ein Artikel gelöscht wird, passiert das Gleiche und der Artikel ist immer noch in der Datenbank.
+
+## Status von Bestellungen ändern
+
+Bedeutung des *state* Felds in der Tabelle *orders*:
+- `open`: es kann bestellt werden
+- `closed`: es kann nicht mehr bestellt werden, aber die Bestellung ist noch nicht abgerechnet
+- `finished`: die Bestellung ist abgerechnet
+
+> Wenn der Status einer Bestellung in der Datenbank geändert wird, werden die Aktionen, die in der Foodsoft beim Ändern stattfinden, nicht durchgeführt oder wieder rückgängig gemacht, also zum Beispiel: eine Bestellung, die bereits beendet und an die Lieferantin verschickt wurde, enthält nach dem erneuten Öffnen und wieder Beenden auch die Bestellungen, die schon bei der Lieferantin bestellt wurden; wenn der Status in der Datenbank von `open` auf `closed` gesetzt wird, wird die Bestellung nicht automatisch versendet; wenn eine Bestellung bereits abgerechnet wurde, werden die entsprechenden Kontotransaktionen nicht automatisch rückgängig gemacht (das muss manuell erledigt werden, wenn gewünscht); wenn der Status einer Bestellung von `closed` auf `finished` gesetzt wird, werden - anders wie beim Abrechnen in der Foodsoft - die entsprechenden Kontotransaktionen nicht durchgeführt.
+{.is-warning}
+
+Beispiel:  Status der Bestellungen bis ID 999 von *beendet* auf *abgerechnet* setzen (ohne dass entsprechende Transaktionen durchgefühert werden):
+```
+UPDATE `orders` 
+SET state = 'closed' 
+WHERE id <= 999; 
+```
+
+
+Beispiel:  Status der Bestellungen mit bestimmten IDs von *abgerechnet* auf *beendet* zurücksetzen (ohne dass entsprechende Transaktionen rückgängig gemacht werden):
+```
+UPDATE `orders` 
+SET state = 'finished' 
+WHERE id IN (1775, 1781, 1801, 1811, 1805, 1816, 1821, 1828, 1825, 1832); 
+```
