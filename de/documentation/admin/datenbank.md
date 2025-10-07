@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2025-10-07T23:06:55.574Z
+date: 2025-10-07T23:09:47.024Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -269,6 +269,7 @@ Die Artikel werden nicht gelöscht, es wird nur im Feld  *deleted_at* ein Datum 
 Bedeutung des *state* Felds in der Tabelle *orders*:
 - `open`: es kann bestellt werden
 - `finished`: es kann nicht mehr bestellt werden, aber die Bestellung ist noch nicht abgerechnet
+- `received` 	detto, aber	Bestellung wurde in Empfang genommen
 - `closed`: die Bestellung ist abgerechnet
 
 > Wenn der Status einer Bestellung in der Datenbank geändert wird, werden die Aktionen, die in der Foodsoft beim Ändern stattfinden, nicht durchgeführt oder wieder rückgängig gemacht, also zum Beispiel: eine Bestellung, die bereits beendet und an die Lieferantin verschickt wurde, enthält nach dem erneuten Öffnen und wieder Beenden auch die Bestellungen, die schon bei der Lieferantin bestellt wurden; wenn der Status in der Datenbank von `open` auf `finished` gesetzt wird, wird die Bestellung nicht automatisch versendet; wenn eine Bestellung bereits abgerechnet wurde, werden die entsprechenden Kontotransaktionen beim Ändern von `closed` auf `finished` nicht automatisch rückgängig gemacht (das muss manuell erledigt werden, wenn gewünscht); wenn der Status einer Bestellung von `finished` auf `closed` gesetzt wird, werden - anders wie beim Abrechnen in der Foodsoft - die entsprechenden Kontotransaktionen nicht durchgeführt.
