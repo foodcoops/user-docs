@@ -2,7 +2,7 @@
 title: Rechnungen
 description: Rechnungen von Lieferantinnen digital ablegen, mit Bestellungen verknüpfen und Bezahlstatus
 published: true
-date: 2025-05-29T23:55:39.713Z
+date: 2025-10-13T05:49:27.430Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:05:17.349Z
@@ -102,7 +102,7 @@ Rechnungsnummer von Rechnung übernehmen. Die Rechnungsnummer wird bei der Bank�
 > Das Feld *Rechnungsnummer* ist ein Textfeld und kann neben Zahlen auch Buchstaben und Leerzeichen enthalten.
 {.is-success}
 
-> Das Feld *Verwendunsgzweck* in Banküberweisungen, für das bei automatisierten Überweisungen die Rechnungsnummer übernommen wird, erlaubt neben Groß- und Kleinbuchstaben nur die Zeichen `, & - / + * $ %`, sowie `ÄÖÜß` und die Ziffern von `0-9`, nicht jedoch andere Sonderzeichen (wie z.B. `# ;`). Enthält die Rechnungsnummer unzulässige Zeichen, kann es beim Bezahlen der Rechnung passieren, dass die Bank-App die Überweisung ablehnt.
+> Das Feld *Verwendunsgzweck* in Banküberweisungen, für das bei automatisierten Überweisungen die Rechnungsnummer übernommen wird, erlaubt neben Groß- und Kleinbuchstaben nur die Zeichen `, & - / + * $ %`, sowie `ÄÖÜß` und die Ziffern von `0-9`, nicht jedoch andere Sonderzeichen (wie z.B. `# ; _`). Enthält die Rechnungsnummer unzulässige Zeichen, kann es beim Bezahlen der Rechnung passieren, dass die Bank-App die Überweisung ablehnt.
 {.is-warning}
 
 
