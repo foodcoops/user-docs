@@ -2,7 +2,7 @@
 title: Lieferantinnen und Artikel
 description: Verwaltung von Lieferantinnen und Artikeln (Foodsoft-Menü "Artikel")
 published: true
-date: 2025-11-02T17:08:54.974Z
+date: 2025-11-02T17:12:42.580Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:50:56.992Z
@@ -242,6 +242,10 @@ Kann von Lieferantin übernommen, selbst gewählt oder auch leer gelassen werden
 
 > Tipp: wenn Bestellnummern selbst gewählt werden, ist es gut, mit der Nummerierung nicht bei 1, sondern z.B. bei 1000 anzufangen, um  in den Bestelllisten, die an die Lieferantin gehen, Verwechslungen mit der Stückzahl zu reduzieren. Siehe "Artikel importieren".
 {.is-info}
+
+> Beim wiederholten Importieren von Artikellisten funktioniert es nur mit Artikelnummern, dass bestehende Artikel durch die hochgeladene neue Liste ersetzt bzw. aktualisiert werden. Ohne Artikelnummern müssen aller Artikel gelöscht werden vor dem erneuten Hochladen. 
+{.is-warning}
+
 
 
 ## Artikel anlegen
