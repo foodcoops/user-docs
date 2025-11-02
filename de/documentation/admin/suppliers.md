@@ -2,7 +2,7 @@
 title: Lieferantinnen und Artikel
 description: Verwaltung von Lieferantinnen und Artikeln (Foodsoft-Menü "Artikel")
 published: true
-date: 2025-11-02T17:02:45.693Z
+date: 2025-11-02T17:08:54.974Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:50:56.992Z
@@ -194,6 +194,8 @@ Welche der beiden Varianten du auswählst, bleibt dir überlassen. Am einfachste
 > Der Standardwert für den Mehrwertsteuersatz, der beim Anlegen von neuen Artikeln im Feld erscheint, kann in den Einstellungen verändert werden.
 {.is-info}
 
+
+
 ### Pfand
 
 [Pfand](/de/documentation/admin/finances/deposits) wird im Bestellpreis inkludiert, und ist für Bestellerinnen nicht separat einsehbar. Daher ist es empfehlenswert, es bei der Artikelbezeichnung dazuzuschreiben, z.B.: **Joghurt im Glas (inkl. 50 ct Pfand)**. 
@@ -204,6 +206,12 @@ Welche der beiden Varianten du auswählst, bleibt dir überlassen. Am einfachste
 
 > Bei den Bestelllisten, die von der Foodsoft erstellt werden, um sie an die ProduzentInnen zu senden, ist das Pfand in den angegebenen Preisen nicht inkludiert. Manche ProduzentInnen stellen keine eigenen Rechnungen, sondern verwenden diese Bestelllisten als Rechnung. Wenn die ProduzentInnen das Pfand des zurückgegegeben Leerguts gut schrieben, muss das Pfand in den Bestelllisten inkludiert werden, indem das Pfand im Nettopreis der Artikel einberechnet und das Pfand auf 0 gesetzt wird. 
 {.is-warning}
+
+> Ein Entwurf, wie die Anzeige des Pfands auch in der Bestellansicht realisiert werden könnte, ist hier zu finden: https://github.com/foodcoops/foodsoft/pull/1076
+{.is-danger}
+
+
+
 
 
 ### Endpreis
