@@ -2,7 +2,7 @@
 title: Lieferantinnen und Artikel
 description: Verwaltung von Lieferantinnen und Artikeln (Foodsoft-Menü "Artikel")
 published: true
-date: 2023-01-27T13:08:29.461Z
+date: 2025-11-02T17:02:45.693Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:50:56.992Z
@@ -183,6 +183,13 @@ Welche der beiden Varianten du auswählst, bleibt dir überlassen. Am einfachste
 
 > Siehe auch grundlegende Infos zur [Mehrwertsteuer](/de/documentation/admin/finances/value-added-tax).
 {.is-info}
+
+> Für die FoodCoop Mitglieder wird beim Bestellen in der Foodsoft der Bruttpreis angezeigt. Auf den Bestelllisten für die Lieferantinnen scheinen hingegeen die Nettopreise auf. 
+{.is-warning}
+
+> Der Mehrwertsteuersatz kann auch dazu "missbraucht" werden, einen prozentuellen Aufschlag oder Rabatt auf den Nettopreis zu erreichen, also zum Beispiel bewirkt `-50` % Mehrwertsteuer bei einem Nettopreis von 3,00 € einen Bruttopreis von 1,50 €. Auf den Bestelllisten für die Lieferantinnen scheint hingegen der Nettopreis von 3,00 € auf!
+{.is-info}
+
 
 > Der Standardwert für den Mehrwertsteuersatz, der beim Anlegen von neuen Artikeln im Feld erscheint, kann in den Einstellungen verändert werden.
 {.is-info}
