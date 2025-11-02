@@ -2,7 +2,7 @@
 title: Lieferantinnen und Artikel
 description: Verwaltung von Lieferantinnen und Artikeln (Foodsoft-Menü "Artikel")
 published: true
-date: 2025-11-02T17:14:55.553Z
+date: 2025-11-02T17:19:26.795Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:50:56.992Z
@@ -240,10 +240,10 @@ Falls Lieferantin Produkte unterschiedlicher Produzentinnen anbietet, sonst leer
 
 Kann von Lieferantin übernommen, selbst gewählt oder auch leer gelassen werden. Es ist ein Textfeld, sodass nicht nur Ziffern, sondern auch Groß- und Kleinbuchstaben und andere Zeichen wie zum Beispiel `-` oder ` ` (Leerzeichen) verwendet werden können.
 
-> Tipp: wenn Bestellnummern selbst gewählt werden, ist es gut, mit der Nummerierung nicht bei 1, sondern z.B. bei 1000 anzufangen, um  in den Bestelllisten, die an die Lieferantin gehen, Verwechslungen mit der Stückzahl zu reduzieren. Siehe "Artikel importieren".
+> Tipp: wenn Bestellnummern selbst gewählt werden, ist es gut, mit der Nummerierung nicht bei 1, sondern z.B. bei 1000 anzufangen, um  in den Bestelllisten, die an die Lieferantin gehen, Verwechslungen mit der Stückzahl zu reduzieren. Alternativ kann auch eine eindeutige Abkürzung gewählt werden wie zum Beispiel `Zg` für Zwiebel gelb und `Zr` für Zwiebel rot.
 {.is-info}
 
-> Beim wiederholten Importieren von Artikellisten funktioniert es nur mit Artikelnummern, dass bestehende Artikel durch die hochgeladene neue Liste ersetzt bzw. aktualisiert werden. Ohne Artikelnummern müssen aller Artikel gelöscht werden vor dem erneuten Hochladen. 
+> Beim wiederholten Importieren von Artikellisten funktioniert es nur mit Artikelnummern, dass bestehende Artikel durch die hochgeladene neue Liste ersetzt bzw. aktualisiert werden. Ohne Artikelnummern müssen alle Artikel gelöscht werden vor dem erneuten Hochladen. 
 {.is-warning}
 
 
