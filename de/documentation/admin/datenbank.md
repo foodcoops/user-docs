@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2025-10-07T23:09:47.024Z
+date: 2025-11-03T23:47:30.166Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -251,6 +251,17 @@ AND `id`<= 1782;
 ```
 
 Das setzt bei allen Rechnungen ohne Finanzlink mit ID <= 1782 die Finanzlink ID auf -1. Diese Rechnungen scheinen dann beim Hinzufügen einer Rechnung bei einem Finanzlink nicht mehr auf. 
+
+
+## Finanztransaktionen löschen
+
+Temporär angelegte Buchungen, die angelegt wurden, weil der automatische Import der Bankdaten ab 2025-09-15 vorübergehend nicht funktioniert hat, wieder löschen. Im Beispiel wurde als Notiz für die Transaktionen einheitlich der Text `Import derzeit nicht möglich ...` verwendet, das `%` dient als Platzhalter für einen beliebigen Text. Zum Testen in der ersten Zeile `DELETE` ersetzen durch `SELECT * `.
+```
+DELETE FROM `financial_transactions` 
+WHERE note LIKE 'Import derzeit nicht möglich%' 
+AND created_on > '2025-09-15' 
+AND financial_link_id IS NULL;
+```
 
 ## Unbenutzte Lagerartikel entfernen
 Alle Lagerartikel "löschen", wo Lagerstand 0 ist:
