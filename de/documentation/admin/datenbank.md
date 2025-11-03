@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2025-11-03T23:47:30.166Z
+date: 2025-11-03T23:50:06.077Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -262,6 +262,9 @@ WHERE note LIKE 'Import derzeit nicht möglich%'
 AND created_on > '2025-09-15' 
 AND financial_link_id IS NULL;
 ```
+
+> Versehentlich gelöschte Transaktionen können nicht mehr so einfach wiederhergestellt werden - am besten die Tabelle vorher sichern (exportieren). Sicherer ist es, die Buchungen einzeln über die Foodsoft zu löschen, weil die Buchungen dann nicht wirklich gelöscht werden, sondern nur eine Gegenbuchung angelegt wird.  
+{.is-warning}
 
 ## Unbenutzte Lagerartikel entfernen
 Alle Lagerartikel "löschen", wo Lagerstand 0 ist:
