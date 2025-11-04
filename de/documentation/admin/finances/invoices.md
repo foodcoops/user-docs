@@ -2,7 +2,7 @@
 title: Rechnungen
 description: Rechnungen von Lieferantinnen digital ablegen, mit Bestellungen verknüpfen und Bezahlstatus
 published: true
-date: 2025-11-03T10:45:24.968Z
+date: 2025-11-04T06:32:51.796Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:05:17.349Z
@@ -90,8 +90,7 @@ In den Feldern **Lager-Lieferung** und **Bestellung** solltest du jene Lager-Lie
 {.is-success}
 
 
-> Wenn eine Bestellung neben den Bestellungen für die Foodcoop Mitglieder auch eine **Lagerbestellung** enthält, und diese Lagerartikel dann mit einer Lieferung in den Lagerstand eingebracht werden, und sowohl die Bestellung als auch die Lieferung der Rechnung korrekter weise zugeordnet wird, würden sie bei der Rechnungsbilanz doppelt berücksichtigt - siehe [Lager](/de/documentation/admin/storage)
-**Anschauen in Demoinstanz**: Bestellung, Bestellung+Lager,  Bestellung+Lager+Lieferung, Bestellung+Lieferung, Lieferung - was wird jeweils bei *Total* berücksichtigt und was bei der Differenz in *Unbezahlte Rechnungen?*
+> Wenn eine Bestellung neben den Bestellungen für die Foodcoop Mitglieder auch eine **Lagerbestellung** enthält, und diese Lagerartikel dann mit einer Lieferung in den Lagerstand eingebracht werden, und sowohl die Bestellung als auch die Lieferung der Rechnung korrekterweise zugeordnet wird, würden sie bei der Rechnungsbilanz doppelt berücksichtigt - siehe [Lager](/de/documentation/admin/storage). Mit diesem Änderungsvorschlag für die Foodsoft sollte das behoben sein: https://github.com/foodcoops/foodsoft/pull/1075 bzw. https://github.com/foodcoopsat/foodsoft/pull/5
 {.is-danger}
 
 
