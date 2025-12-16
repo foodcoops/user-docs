@@ -2,7 +2,7 @@
 title: Mein Profil & Bestellgruppe
 description: Erklärung des eigenen Foodsoft-Kontos und -Bestellgruppe, persönliche Einstellungen, Zahlungsreferenzrechner
 published: true
-date: 2022-02-01T06:04:20.844Z
+date: 2025-12-16T16:46:49.615Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-02T20:58:16.893Z
@@ -101,7 +101,7 @@ Unter Privatsphäre kannst du selbst einstellen, ob deine Telefonnummer und Emai
 
 Hier kannst du einstellen, welche Art von Foodsoft-Nachrichten du bekommst:
 - **Informiere mich über meine [Bestellergebnisse](/de/documentation/usage/order) (nach Ende der Bestellung).**
-- **Informiere mich über Lieferdetails (nachdem die Ware entgegengenommen wurde)**.
+- **Informiere mich über Lieferdetails (nachdem die [Ware entgegengenommen wurde](/de/documentation/admin/orders#bestellungen-in-empfang-nehmen))**. Hier wirst du jedes Mal verständigt, wenn es bei einer Lieferung Abweichungen gegeben hat gegenüber der Bestellung, also zum Beispiel etwas nicht oder zu wenig davon geliefert wurde. Dabei ist es egal, ob du bei der Bestellung auch überhaupt etwas bestellt hast, oder ob es Artikel betrifft, die du bestellt hast! 
 - **Informiere mich, falls** das Guthaben meiner **Bestellgruppe ins Minus rutscht**.
 - **Erinnere mich an anstehende [Aufgaben](/de/documentation/usage/tasks-cooperate)**.
 - **Bekomme [Nachrichten](/de/documentation/usage/communication) als E-Mails**: (Nachrichten an alle, individuelle Nachrichten von anderen Foodcoop Mitgliedern, Arbeitsgruppen oder Nachrichtengruppen). Solange du in deiner Foodcoop aktiv bist, und in deiner Foodcoop Foodsoft Nachrichten verwendet werden, solltest du diese Option unbedingt aktiviert haben, damit du z.B. erfährst, wann es was zu bestellen gibt, wo Mithilfe benötigt wird, wann es Treffen gibt wo du dabei sein solltest. Sobald du „Bekomme Nachrichten als E-Mails“ deaktivierst, bekommst du von deiner Foodcoop keine Emails mehr, und bist damit quasi nicht mehr ansprechbar, außer du schaust regelmäßig in die Foodsoft, ob Nachrichten für dich eingelangt sind. 
