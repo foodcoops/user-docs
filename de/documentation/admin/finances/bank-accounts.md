@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2024-01-26T22:11:10.178Z
+date: 2026-02-03T10:31:13.915Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
@@ -22,8 +22,11 @@ Dies bietet folgende Vorteile:
     - In Verknüpfung mit Trennung in Kontotransaktionstypen wie etwa Treuhand und Verein ermöglicht dies eine saubere Buchhaltung mit nur einem Vereinskonto
 - Es werden auch **mehrere Vereinskonten** unterstützt. 
 
-> Dass die Foodsoft Überweisungen am Bankkonto durchführen kann, um Rechnungen zu bezahlen, wird gerade entwickelt und befindet sich in der Testphase (Stand  16.02.2021). 
-{.is-danger}
+
+> Die Bank-Anbindung erfolgt durch eine extra Software außerhalb der Foodsoft. Sie nennt sich **Bankproxy** und kann hier eingesehen und weiterentwickelt werden: 
+https://github.com/foodcoopsat/bankproxy
+{.is-info}
+
 
 
 ## Unterstützte Banken (Österreich)
@@ -39,7 +42,7 @@ Für folgende Banken unterstützt die Foodsoft eine Bankanbindung:
 
 ### Vollautomatisch
 
-- Erste Bank
+- Erste Bank: Buchungsimport und Rechnungen bezahlen
 > Synchronisation zwei mal täglich um ca. 08:00 und 20:00 Uhr (Sommerzeit) bzw. 07:00 und 19:00 Uhr (Winterzeit)
 {.is-info}
 
@@ -51,16 +54,16 @@ Für folgende Banken unterstützt die Foodsoft eine Bankanbindung:
 
 ### Halbautomatisch
 
-- Raiffeisen, Umweltcenter Gunskirchen
+- Raiffeisen, Umweltcenter Gunskirchen: Buchungsimport und Rechnungen bezahlen
 - Holvi
 - Oberbank
 - Sparda
-- Bawag, Easybank (neu seit 2021-12)
+- Bawag, Easybank
 
 > Auslösen durch Mitglied mit Finanzzugriff via  *Finanzen > Bankkonten > Importieren*. Zweifaktorauthentifizierung erforderlich.
 {.is-info}
 
-> Falls die Bank deiner Foodcoop hier nicht vorkommt, wende dich bitte im Forum an @paroga. Bitte diese Liste ergänzen, falls eine  neue Bank hinzugefügt wurde.
+> Falls die Bank deiner Foodcoop hier nicht vorkommt, schreibe bitte im IG-Forum einen Beitrag. Bitte diese Liste ergänzen, falls eine  neue Bank hinzugefügt wurde.
 {.is-warning}
 
 ### Nicht unterstützte Banken
