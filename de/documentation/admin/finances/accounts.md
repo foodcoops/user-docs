@@ -2,7 +2,7 @@
 title: Foodsoft-Konten für Guthaben der Mitglieder
 description: Verwaltung der Guthaben-Konten aller Foodcoop-Mitglieder und Transaktionen (Menü "Finanzen" > "Konten verwalten")
 published: true
-date: 2026-02-14T13:03:31.044Z
+date: 2026-02-14T13:12:42.419Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:12:07.102Z
@@ -165,6 +165,8 @@ ordergroup:
   - name: membership_fee
     label: Mitgliedsbeitrag
     financial_transaction_source: true
+    hint: Als negative Zahl eingeben, z.B. -10, kein Leerzeichen zwische Minus und Zahl!
+    placeholder: '-10'
 ```
 - Administration \> Einstellungen \> ...*(ergänzen sobald Interface implementiert)*
 - Einmalig erforderlich: Alle Bestellgruppen über *Administration \> Bestellgruppen* einzeln bearbeiten: Mitgliedsbeitrag mit minus eingeben, also z.B. `-10` für 10 € Mitgliedsbeitrag
