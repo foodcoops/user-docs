@@ -2,7 +2,7 @@
 title: Lieferantinnen und Artikel
 description: Verwaltung von Lieferantinnen und Artikeln (Foodsoft-Menü "Artikel")
 published: true
-date: 2025-11-02T17:19:26.795Z
+date: 2026-04-12T00:23:13.540Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T21:50:56.992Z
@@ -72,7 +72,7 @@ Dieses Feld kann auf zwei Arten benutzt werden:
 - als Text, der beim Bestellen angezeigt wird
 - als Zahl für einen Geldbetrag, der einen Mindestbestellwert darstellt.  Bei Bestellung wird dann dieser Wert und der aktuelle Bestellwert von allen Bestellgruppen angezeigt. Bei Anlegen der Bestellung kann die Option “... nur wenn Mindestbestellwert erreicht ist” ausgewählt werden.
 
-> Bei der Angabe einer Zahl kann zusätzlich hinter der Zahl eine Währung bzw. ein Währungssymbol  angegeben werden, z.B. "40 €". Getestet von Mirko 2022-10-28, jedoch keine Garantie, dass es so bleibt.
+> Bei der Angabe einer Zahl kann zusätzlich hinter der Zahl eine Währung bzw. ein Währungssymbol  angegeben werden, z.B. `40 €`. Für einen Kommazahl muss ein Punkt verwendet werden: `39.90`. Wird ein Beistrich als Dezimaltrenner verwendet, wird alles ab dem Beistrich ignoriert, also `39,90` => 39.
 {.is-success}
 
 
