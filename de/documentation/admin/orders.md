@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2025-05-05T20:57:33.733Z
+date: 2026-04-12T00:27:45.722Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -124,7 +124,7 @@ Empfehlung, Bestellungen erst mit einem Enddatum zu versehen bzw. zu beenden, we
 - **keine automatische Aktion:** die Bestellung bleibt offen. Sinnvoll, wenn eine Mindestbestellmenge erreicht werden soll, und die Bestellung so lange hinausgezögert werden soll, bis sie erreicht wird. Oder wenn unklar ist, wann die Lieferung genau erfolgen wird (Abholdatum unbekannt).
 - **Bestellung beenden**: die Bestellung wird automatisch beendet, und kann dann auch nicht mehr geöffnet werden.
 - **Bestellung beenden und an Lieferantin schicken:** die Bestellliste wird von der Foodsoft automatisch als PDF Anhang per Email an die Lieferantin und an das Foodsoft Mitglied geschickt. 
-- **Bestellung beenden und an Lieferantin schicken sofern die Mindestbestellmenge erreicht wurde**: bei jeder Lieferantin kann eine Mindestbestellmenge als Geldbetrag angegeben werden. Dieser Mindestbetrag und wieviel davon schon erreicht wurde, wird den Bestellgruppen beim Bestellen angezeigt. Wenn die Bestellung nicht zustande kommt, sollte
+- **Bestellung beenden und an Lieferantin schicken sofern die Mindestbestellmenge erreicht wurde**: bei jeder Lieferantin kann eine Mindestbestellmenge als Geldbetrag angegeben werden. Er wird mit dem Brutto-Wert der Bestellung verglichen, der Mehrwertsteuer und Pfand(!) enthält. Dieser Mindestbetrag und wieviel davon schon erreicht wurde, wird den Bestellgruppen beim Bestellen angezeigt. Wenn die Bestellung nicht zustande kommt, sollte
   - Eine Nachricht an die Bestellgruppen geschickt werden (Funktion „An die Mitglieder schicken, die bei einer Bestellung etwas bestellt haben“, siehe [Kommunikation](/de/documentation/usage/communication)). Diese Funktion kann auch direkt über das Brief Symbol beim Bearbeiten der Bestellung ausgelöst werden.
   - Bestellen \> Bestellverwaltung \> Beendet \> Bestellung (Zeile mit der betroffenen Bestellung suchen)... \> in Empfang nehmen, Alle auf Null setzen, Bestellung in Empfang nehmen. Damit wird dann auch nichts abgerechnet, und die auf den Bestelllisten (Bestellen \> Abholtage) scheint bestellt: x, erhalten: 0 auf, in grau statt schwarz. Das sollte idealerweise möglichst rasch nachdem die Bestellung gescheitert ist, passieren, damit es bei den ausgedruckten Bestelllisten (siehe unten) berücksichtigt ist. 
   - Vorschlag für Automatisierung: [*https://github.com/foodcoops/foodsoft/issues/858*](https://github.com/foodcoops/foodsoft/issues/858)
