@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2025-11-03T23:50:06.077Z
+date: 2026-04-27T20:26:51.995Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -108,8 +108,7 @@ Klicke auf **Bearbeiten** und verändere den Wert unter Value. Beispiel:
 
 ![db_cf_bearbeiten-.png](/db_cf_bearbeiten-.png)
 
-### Syntax
-#### Felder für unterschiedliche Objekte
+### Syntax: Felder für unterschiedliche Objekte
 
 So können jeweils beliebig viele Felder für Benutzerinnen, Bestellgruppen, Arbeitsgruppen, Lieferantinnen und Rechnungen konfiguriert werden.
 
@@ -132,7 +131,7 @@ invoice:
     label: Rechnungen-Feld
 ```
 
-#### Weitere Optionen
+### Syntax: Weitere Optionen
 
 Für Felder gibt es noch weitere hilfreiche Optionen:
 
@@ -166,7 +165,7 @@ Das sieht dann so aus:
 Die oben aufgelisten Datentypen sind erfolgreich getestet worden.
 {.is-info}
 
-#### Anwendung auf Kontotransaktionen (z.B. für Mitgliedsbeitrag)
+## Anwendung auf Kontotransaktionen (z.B. für Mitgliedsbeitrag)
 
 ```
 --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
