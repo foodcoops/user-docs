@@ -2,7 +2,7 @@
 title: Überblick
 description: Funktionsüberblick und Einsatzmöglichkeiten der Foodsoft
 published: true
-date: 2021-11-26T11:06:26.697Z
+date: 2026-04-27T19:45:08.198Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T19:57:55.363Z
@@ -159,6 +159,6 @@ Wenn ihr dabei seid, eine Foodcoop neu zu gründen, könnt ihr in der [Demo-Inst
 {.links-list}
 - [Begriffsklärungen](/de/documentation/admin/terms-definitions) Manche Begriffe in der Foodsoft haben spezielle oder auch mehrfache Bedeutungen
 - [Brutto, Netto und Mehrwertsteuer](/de/documentation/admin/finances/value-added-tax) Wie wir als Foodcoop mit Mehrwertsteuer umgehen sollen, und wie Mehrwertsteuer in der Foodsoft berücksichtigt werden kann
-- [Foodsoft-Listen](/de/documentation/admin/lists) Allgemeines zum Umgang mit Listen-Darstellungen in der Foodsoft (Artikel, Bestellungen, Rechnungen, ...), die schnell mal etwas unübersichtlich werden können
-
+- [Foodsoft-Listen](/de/documentation/admin/lists) Allgemeines zum Umgang mit Listen-Darstellungen in der Foodsoft (Artikel, Bestellungen, Rechnungen, ...), die schnell mal etwas unübersichtlich werden können 
+- [Datenbankzugriff via phpMyAdmin](/de/documentation/admin/datenbank) Änderungen vornehmen, für die es noch keine Benutzeroberfläche gibt, oder viele Änderungen auf einmal durchführen.
 
