@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2026-04-27T20:26:51.995Z
+date: 2026-04-27T20:28:51.829Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -165,7 +165,7 @@ Das sieht dann so aus:
 Die oben aufgelisten Datentypen sind erfolgreich getestet worden.
 {.is-info}
 
-## Anwendung auf Kontotransaktionen (z.B. für Mitgliedsbeitrag)
+## Mitgliedsbeitrag Sammelbuchung aktivieren
 
 ```
 --- !ruby/hash:ActiveSupport::HashWithIndifferentAccess
