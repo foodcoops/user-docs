@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2026-04-12T00:27:45.722Z
+date: 2026-05-31T09:32:41.316Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -501,7 +501,7 @@ Manche ProduzentInnen verrechnen pro Lieferung Transportkosten, manchmal auch ab
 
 ![admin_finances_order_transportkosten_bearbeiten1.png](/uploads-de/admin_finances_order_transportkosten_bearbeiten1.png)
 
-4. Gesamte Transportkosten für Bestellung eingeben (auch negativer Betrag möglich, falls z.B. zu viel bereits in die Artikelpreise einkalkulierte Transportkosten abgezogen werden sollen)
+4. Gesamte Transportkosten für Bestellung eingeben, inklusive Mehrwertsteuer (Produzentinnen weisen auf ihren Rechnungen oft den Netto Betrag aus und die Mehrwertsteuer wird erst für den Endbetrag dazu gerechnet). Auch ein negativer Betrag ist möglich, falls z.B. zu viel bereits in die Artikelpreise einkalkulierte Transportkosten abgezogen werden sollen.
 
 ![admin_finances_order_transportkosten_bearbeiten2.png](/uploads-de/admin_finances_order_transportkosten_bearbeiten2.png)
 
