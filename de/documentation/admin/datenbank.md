@@ -2,7 +2,7 @@
 title: Datenbank - phpMyAdmin
 description: Welche verstecken Features der Zugriff auf die Foodsoft-Datenbank bietet
 published: true
-date: 2026-06-05T07:35:34.317Z
+date: 2026-06-05T08:10:16.009Z
 tags: 
 editor: markdown
 dateCreated: 2023-04-09T02:10:13.914Z
@@ -265,7 +265,7 @@ AND financial_link_id IS NULL;
 > Versehentlich gelöschte Transaktionen können nicht mehr so einfach wiederhergestellt werden - am besten die Tabelle vorher sichern (exportieren). Sicherer ist es, die Buchungen einzeln über die Foodsoft zu löschen, weil die Buchungen dann nicht wirklich gelöscht werden, sondern nur eine Gegenbuchung angelegt wird.  
 {.is-warning}
 
-> Die Kontostände der betroffenen Bestellgruppen (und damit deren verfügbares Guthaben) werden dadurch nicht automatisch aktualisiert. Diese werden nämlich als berechneter Wert in `groups/account_balance` gespeichert und nur aktualisiert, wenn eine neue Buchung erstellt wird. Eine einfache Lösung ist also, eine Sammel-Transaktion mit allen Bestellgruppen (oder allen betroffenen) mit Betrag 0 zu erstellen.
+> Die Kontostände der betroffenen Bestellgruppen (und damit deren verfügbares Guthaben) werden dadurch nicht automatisch aktualisiert. Diese werden nämlich als berechneter Wert in `groups/account_balance` gespeichert und nur aktualisiert, wenn eine neue Buchung erstellt wird. Eine einfache Lösung ist also, eine Sammel-Transaktion mit allen Bestellgruppen (oder allen betroffenen) mit Betrag 0 zu erstellen. Dann werden die Kontostände wieder aus allen jemals getätigten Transaktionen neu berechnet.
 {.is-warning}
 
 ## Unbenutzte Lagerartikel entfernen
