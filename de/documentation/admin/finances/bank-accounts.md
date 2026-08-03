@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2026-08-03T12:08:33.122Z
+date: 2026-08-03T12:14:49.133Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
@@ -98,6 +98,7 @@ Jedes Mitglied findet seinen Zahlungsreferenz-Rechner im [Dropdownmenü des Prof
 Weitere Infos zum Zahlunsgreferenzcode:
 - [Zahlungsreferenz-Rechner](/de/documentation/usage/profile-ordergroup#zahlungsreferenz-rechner) Wie Mitglieder ihre Zahlunsgreferenzcodes erstellen können, Beispiele, häufige Fehler
 - [Transaktionsklassen](/de/documentation/admin/finances/accounts) Was eingerichtet werden muss, damit Zahlunsgreferenzcodes verwendet werden können
+- [Empfängerbezeichnung der Foodcoop-Bank und QR-Code hinzufügen](/de/documentation/admin/setting-javascripts) Seit 2025 muss die Bezeichnung der Empfängerin bei Überweisungen überprüft werden. Mit dieser Erweiterung kann die Bezeichnung hinzugefügt werden. Zusätzlich kann auch ein QR-Code zum Scannen mit der E-Banking App angezeigt werden, sodass die Überweisungsdaten (Empfängerin, IBAN, Betrag, Zahlungsreferenzcode) automatisch übernommen werden. 
 {.links-list}
 
 # Bankkonto einrichten in der Foodsoft
