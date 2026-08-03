@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2026-08-03T11:38:27.522Z
+date: 2026-08-03T12:01:08.101Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -235,7 +235,7 @@ Das macht aber eigentlich nur Sinn, um das **Abholdatum anzupassen** oder nachzu
 > Das Datum bei *Endet am* einer bereits beendeten Bestellung auf ein Datum in der Zukunft zu setzten, ändert nichts am Status der Bestellung, sie bleibt trotzdem beendet und es kann nichts mehr bestellt werden. 
 {.is-warning}
 
-> Hier gibt es einen Workaround, der über Javascript entsprechende Links hinzufügt: ...
+> Hier gibt es einen Workaround, der entsprechende Links hinzufügt: [Javascripts, die Seiteninhalte anpassen](/de/documentation/admin/setting-javascripts)
 {.is-success}
 
 ![admin_orders_pickup-links.png](/uploads-de/admin_orders_pickup-links.png)
