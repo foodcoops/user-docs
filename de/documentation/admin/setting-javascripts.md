@@ -2,7 +2,7 @@
 title: Javascripts zur Anpassung von Foodsoft-Seiten
 description: 
 published: true
-date: 2026-08-03T11:56:33.707Z
+date: 2026-08-03T11:59:21.709Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-03T11:53:29.750Z
@@ -12,6 +12,7 @@ dateCreated: 2026-08-03T11:53:29.750Z
 
 Unter *Einstellungen > Layout > Fußzeile* kann ein Javascrip eingegeben werden. Dieses Skript wird bei jeder Seite ausgeführt und kann dann die Seite anpassen. 
 
+## Beispiele
 Hier ein paar Beispiele: 
 - QR-Code und Bezeichnung der Bank der Foodcoop im Zahlungsreferenzrechner anzeigen
 - Bestellansicht: längere Notizen von Artikeln in Zeile darunter anzeigen
