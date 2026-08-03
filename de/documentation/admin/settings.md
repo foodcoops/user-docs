@@ -2,7 +2,7 @@
 title: Einstellungen
 description:  Erklärung zu globalen/administrativen Einstellungen der Foodsoft (Menü: "Administration")
 published: true
-date: 2021-10-07T18:34:41.218Z
+date: 2026-08-03T11:40:56.581Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-21T00:20:52.701Z
@@ -93,7 +93,7 @@ Links im Foodsoft-Menü "Links" verwalten.
 
 ## Layout
 
-- Fußzeile Webseite
+- Fußzeile Webseite - hier können auch Javascrips eingefügt werden, die Seiteninhalte anpassen. 
 - Angepasstes CSS
 - PDF-Dokumente
   - Schriftgrösse
@@ -101,6 +101,7 @@ Links im Foodsoft-Menü "Links" verwalten.
   - Seitenwechsel
   - Jede Bestellgruppe auf eine eigene Seite bringen
   - Jeden Artikel auf eine eigene Seite bringen
+ 
 
 ## Sprache
 
