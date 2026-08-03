@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2026-02-03T10:31:13.915Z
+date: 2026-08-03T12:08:33.122Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
@@ -356,6 +356,12 @@ Aus der Liste der Kontransaktionen eine auswählen. Der Aufbau der Liste kann et
 ### Rechnung hinzufügen
 
 Aus der Liste der Rechnungen auswählen. 
+
+
+## Unvollständige Finanzlinks anzeigen
+
+Unter dem Foodsoft Link `.../finance/links/incomplete` wird  eine Liste der unvollständigen Finanzlinks ausgegeben, also wo die Bilanz nicht Null ist. Diese Seite ist nicht über einen Menüeintrag oder Seitenlink erreichbar.
+
 
 
 ## Sonstige Bankkonto-Transaktionen
