@@ -2,7 +2,7 @@
 title: Javascripts zur Anpassung von Foodsoft-Seiten
 description: 
 published: true
-date: 2026-08-03T11:53:29.750Z
+date: 2026-08-03T11:56:33.707Z
 tags: 
 editor: markdown
 dateCreated: 2026-08-03T11:53:29.750Z
@@ -252,6 +252,11 @@ if(href.includes("/orders/") || href.includes("file:///")) {
 </script>
 
 ```
+
+> Die Skripts funktionieren zum Teil nur, wenn die Foodsoft auf Deutsch eingestellt ist. Eine Anpassung auf andere Sprachen sollte bei Bedarf leicht möglich sein.
+{.is-warning}
+
+
 
 ## Links
 - IG Foodcoops Forum: [Foodsoft anpassen mit custom HTML, CSS und Javascript](https://forum.foodcoops.at/t/tipp-foodsoft-anpassen-mit-custom-html-css-und-javascript-z-b-icon-setzen/8732)
