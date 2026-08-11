@@ -2,7 +2,7 @@
 title: Bestellungen
 description: Verwaltung von Bestellungen und Rechnungen (Foodsoft-Menü: "Bestellungen" > "Bestellverwaltung" und "Abholtage" ; "Finanzen" > "Bestellungen abrechnen")
 published: true
-date: 2026-08-03T12:01:08.101Z
+date: 2026-08-11T12:57:37.558Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T22:03:00.312Z
@@ -510,10 +510,10 @@ Manche ProduzentInnen verrechnen pro Lieferung Transportkosten, manchmal auch ab
 ![admin_finances_order_transportkosten_bearbeiten2.png](/uploads-de/admin_finances_order_transportkosten_bearbeiten2.png)
 
 5. Transportkostenverteilung auswählen:
-   1. Kosten nicht auf die Bestellgruppen aufteilen
-   2. Jede Bestellgruppe zahlt gleich viel
-   3. Kosten anhand der Bestellsumme aufteilen
-   4. Kosten anhand der Anzahl an erhaltenen Artikeln verteilen 
+   1. **Kosten nicht auf die Bestellgruppen aufteilen**: Foodcoop übernimmt Transportkosten
+   2. **Jede Bestellgruppe**, die etwas bestellt hat, **zahlt gleich viel**
+   3. **Kosten anhand der Bestellsumme** auf Bestellerinnen **aufteilen**
+   4. **Kosten anhand der Anzahl an erhaltenen Artikeln** auf Bestellerinnen **verteilen** 
 6. Speichern
 7. *Ansichtsoptionen > Gruppenübersicht*: Anteil an Transportkosten für jede Bestellgruppe wird angezeigt
 8. Solange die Bestellung noch nicht abgerechnet wurde, kann der Vorgang ab Schritt 3 wiederholt werden, um Korrekturen vorzunehmen, nachdem die Ansichtsoption wieder auf *Bestellung bearbeiten* zurückgesetzt wurde.
