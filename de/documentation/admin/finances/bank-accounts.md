@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2026-10-24T00:37:32.104Z
+date: 2026-10-24T14:46:31.838Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
@@ -123,6 +123,9 @@ Diese Schritte müssen für jedes Bankkonto durchgeführt werden, wie im Folgend
 
 > Es können auch mehrere Bankkonten eingerichtet werden.
 {.is-info}
+
+> Wenn sich bei einem Bankkonto die IBAN ändert, muss ein neuer Bankproxy eingerichtet werden!
+{.is-warning}
 
 
 ## Bankproxy anlegen
