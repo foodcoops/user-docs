@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2026-10-24T00:37:04.739Z
+date: 2026-10-24T00:37:32.104Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
