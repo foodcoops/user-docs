@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2026-08-03T12:14:49.133Z
+date: 2026-10-24T00:32:04.680Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
@@ -72,6 +72,16 @@ Banken, die von FC verwendet werden, wo es noch keine Anbinung gibt:
 - *Bank Austria (prESSBAUM)*
 
 
+### Implementierung über Bankproxy
+
+Die Anbindung der Foodsoft an Banken ist über eine eigenständige Software, genannt *Bankproxy* umgesetzt, die grundsätzlich auch von anderen Softwaresystem (z.B. andere Bestellsoftware als Foodsoft) genutzt werden kann.
+
+Die Bank-spezifischen Anpassungen finden sich im Bankproxy Unterverzeichnis `tasks`:
+
+https://github.com/foodcoopsat/bankproxy/tree/main/src/tasks
+
+### Wie kann eine Bankanbindung für eine neue Bank erstellt werden? 
+Der Bankproxy imitiert die Kommunikation zwischen Ebanking und Bankserver. Diese Kommunikation (HTTPS GET/POST Requests) kann man, wenn jemand Zugriff auf das E-Banking hat, über die Netzwerkanalyse in der Browswe-Entwicklungskonsole mitverfolgen und analyisieren ([Beispiel für ELBA](/de/https://forum.foodcoops.at/t/foodsoft-bankanbindung-fuer-raiffeisen-konto/7999/9)), um daraus ein Typescript zu erstellen, das die für die Bankanbindung erforderlichen Schritte durchführt (Authentifizierung, Buchungszeilen abrufen, Überweisungen durchführen).   
 
 ## Finanzlinks
 
