@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2026-10-24T00:32:04.680Z
+date: 2026-10-24T00:32:24.578Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
@@ -68,7 +68,7 @@ Für folgende Banken unterstützt die Foodsoft eine Bankanbindung:
 
 ### Nicht unterstützte Banken
 
-Banken, die von FC verwendet werden, wo es noch keine Anbinung gibt:
+Banken, die von FC verwendet werden, wo es noch keine Anbindung gibt:
 - *Bank Austria (prESSBAUM)*
 
 
