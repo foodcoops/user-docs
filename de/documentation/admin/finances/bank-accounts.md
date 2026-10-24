@@ -2,7 +2,7 @@
 title: Bankkonto mit Foodsoft verknüpfen
 description: Automatisierte Erfassung von neuen und bestehenden Überweisungen (Menü: "Finanzen" > "Bankkonten")
 published: true
-date: 2026-10-24T00:36:31.096Z
+date: 2026-10-24T00:37:04.739Z
 tags: 
 editor: markdown
 dateCreated: 2021-04-20T23:17:42.160Z
@@ -81,7 +81,7 @@ Die Bank-spezifischen Anpassungen finden sich im Bankproxy Unterverzeichnis `tas
 https://github.com/foodcoopsat/bankproxy/tree/main/src/tasks
 
 ### Wie kann eine Bankanbindung für eine neue Bank erstellt werden? 
-Der Bankproxy imitiert die Kommunikation zwischen Ebanking und Bankserver. Diese Kommunikation (HTTPS GET/POST Requests) kann man, wenn jemand Zugriff auf das E-Banking hat, über die Netzwerkanalyse in der Browswe-Entwicklungskonsole mitverfolgen und analyisieren ([Beispiel für ELBA](/de/https://forum.foodcoops.at/t/foodsoft-bankanbindung-fuer-raiffeisen-konto/7999/9)), um daraus ein Typescript zu erstellen, das die für die Bankanbindung erforderlichen Schritte durchführt (Authentifizierung, Buchungszeilen abrufen, Überweisungen durchführen). Dafür ist es hilfreich, [Foodsoft und Bankproxy lokal zu installieren](https://forum.foodcoops.at/t/foodsoft-mit-bankproxy-lokal-installieren/10542).
+Der Bankproxy imitiert die Kommunikation zwischen Ebanking und Bankserver. Diese Kommunikation (HTTPS GET/POST Requests) kann man, wenn jemand Zugriff auf das E-Banking hat, über die Netzwerkanalyse in der Browswe-Entwicklungskonsole mitverfolgen und analyisieren ([Beispiel für ELBA](/de/https://forum.foodcoops.at/t/foodsoft-bankanbindung-fuer-raiffeisen-konto/7999/9)), um daraus ein Typescript zu erstellen, das die für die Bankanbindung erforderlichen Schritte durchführt (Authentifizierung, neue Buchungszeilen abrufen, Überweisungen durchführen). Dafür ist es hilfreich, [Foodsoft und Bankproxy lokal zu installieren](https://forum.foodcoops.at/t/foodsoft-mit-bankproxy-lokal-installieren/10542).
 
 ## Finanzlinks
 
